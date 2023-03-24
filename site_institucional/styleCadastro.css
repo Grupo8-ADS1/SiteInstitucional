@@ -18,7 +18,7 @@ body{
 
     /* azul-escuro */
 
-    background: #0D1721;
+    background: #0066FF;
     mix-blend-mode: normal;
     backdrop-filter: blur(2px);
     /* Note: backdrop-filter has minimal browser support */
