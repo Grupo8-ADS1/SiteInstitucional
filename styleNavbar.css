@@ -117,6 +117,9 @@ video {
     font-size: 36px;
     line-height: 23px;
     color: #FFFFFF;
+    margin-left: 20%;
+    margin-top: 20px;
+    
 
 }
 
@@ -133,13 +136,12 @@ video {
     justify-content: space-around;
     width: 200px;
     list-style: none;
-    margin-left: 40%;
+    margin-left: 50%;
     padding: 10px;
-
 }
 
 .links a {
-    width: 59px;
+    width: 80px;
     height: 19px;
     left: 16px;
     top: 11px;
@@ -153,38 +155,9 @@ video {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 200px;
+    width: 100px;
     list-style: none;
-    margin-left: 40%;
+    margin-left: 75%;
     padding: 10px;
     text-decoration: none;
-}
-
-.imagem {
-    background-size: cover;
-    width: 100%;
-    margin: none;
-}
-
-.banner {
-    background-image: url('./image\ 1.png');
-    background-size: cover;
-}
-
-.banner .container {
-    color: white;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.banner span {
-    width: 600px;
-    margin-left: 75%;
-
-}
-
-h1 {
-    font-size: 36px;
 }
