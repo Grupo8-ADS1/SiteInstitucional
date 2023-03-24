@@ -106,18 +106,15 @@ video {
 }
 
 .titulo {
-    position: absolute;
+    display: flex;
     width: 59px;
-    height: 19px;
     left: 16px;
     top: 11px;
     font-family: 'Secular One';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    line-height: 23px;
     color: #FFFFFF;
-    margin-left: 20%;
     margin-top: 20px;
     
 
@@ -157,7 +154,6 @@ video {
     justify-content: space-around;
     width: 100px;
     list-style: none;
-    margin-left: 75%;
     padding: 10px;
     text-decoration: none;
 }

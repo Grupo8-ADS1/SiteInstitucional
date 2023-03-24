@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,800&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@ body{
 
 /*HEADER ----------------------------------------------------------------*/
 .header{
-    background-color: #0D1721;
+    background-color: #0066FF;
     mix-blend-mode: normal;
     backdrop-filter: blur(2px);
     height: 4.5rem;
@@ -33,12 +34,25 @@ body{
 .titulo {
     color: #ffffff;
     font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 .navbar li, .navbar a{
     color: #ffffff;
     text-decoration: none;
-}   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}  
+
+.teste{
+    width: 1rem;
+    
+}
 
 /*TITULO ----------------------------------------------------------------*/
 .titulo-quem-somos{
