@@ -1,126 +1,14 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+body {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
 }
 
-
+/*HEADER ----------------------------------------------------------------*/
 .header {
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    left: 0px;
-    top: 0px;
-
-    /* azul-escuro */
-
-    background: #0D1721;
+    background-color: #0066FF;
     mix-blend-mode: normal;
     backdrop-filter: blur(2px);
-    /* Note: backdrop-filter has minimal browser support */
-
-    border-radius: 0px;
-}
-
-.titulo {
-    position: absolute;
-    width: 59px;
-    height: 19px;
-    left: 16px;
-    top: 11px;
-    font-family: 'Secular One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 23px;
-    color: #FFFFFF;
-    margin-left: 20%;
-    margin-top: 20px;
-    
-
+    height: 4.5rem;
 }
 
 .container {
@@ -129,126 +17,305 @@ video {
     margin: auto;
 }
 
-.links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 200px;
-    list-style: none;
-    margin-left: 50%;
-    padding: 10px;
+.header .container {
+    justify-content: space-between;
 }
 
-.links a {
-    width: 80px;
-    height: 19px;
-    left: 16px;
-    top: 11px;
-    font-family: 'Secular One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 23px;
-    color: #FFFFFF;
+.navbar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-    width: 100px;
     list-style: none;
-    margin-left: 75%;
-    padding: 10px;
+    text-align: start;
+}
+
+.titulo {
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.navbar li,
+.navbar a {
+    color: #ffffff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 
-.imagem {
-    background-size: cover;
-    width: 100%;
-    margin: none;
+.teste {
+    width: 1rem;
 }
 
+.btn-login a {
+
+    background-color: #DEC43B;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    box-shadow: -1px 3px 11px -3px #606060;
+}
+
+/*Banner*/
 .banner {
-    background-image: url('./image\ 1.png');
+    background-image: url('./Frame\ 1.png');
     background-size: cover;
+    /*imagem sempre ocupa toda a tela*/
+    ;
+    width: 100%;
+    height: 50rem;
 }
 
 .banner .container {
-    color: white;
-    height: 500px;
-    justify-content: center;
+    height: 400px;
+    justify-content: left;
+    /*alinhar horizontal*/
     align-items: center;
+    /*alinha vertical*/
 }
 
-.banner span {
-    width: 600px;
-    margin-left: 75%;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-
-/* =============================================== */
-
-.part2{   
-    margin-left: 40px;
-    margin-top: 50px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 22px;    
-    color: #0D1721;
-}
-
-.part2 p{
-    margin-top: 40px;
-    font-size: 40px;
-    width: 50%;
-    height: 60px;
-    margin-left: 25px;
-    padding: 2px;
-
+.banner p {
+    font-size: 6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 
 }
 
-.icone {
-    float:right; 
-    margin-right:150px; 
-    margin-left: 10px; 
-    margin-bottom:5px;
-    width: 250px;
-    right: 250px;
-    margin-top: -100px;
+.frase {
+    margin-top: 15rem;
+    text-shadow: 1px 2px 20px black;
+}
+
+button{
+    width: 300px;
+    height: 100px;
+    font-size: 2rem;
+    background-color: #0066FF;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: -300px;
+    margin-left: 20rem;
+    border: none;
+    border-radius: 20px;
+}
+
+/*Conteudo*/
+
+.context{
+    margin-bottom: 20rem;
+    margin-top: 200px
     
 }
 
-.botao{
-    align-items: center;
+.container-pt1{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.context h1{
+    display: flex;
     justify-content: center;
-    margin-top: 150px;
-    background-color: #0D1721;
+    color: #4D4B4B;
+    padding-top: 20px;
+    
+}
+
+
+/*======================================================================*/
+
+
+
+.eficiencia{
+    text-align: justify;
+    width: 11rem;
+    background-color: #0066FF;
+    height: 250px;
     width: 200px;
-    height: 50px;
+    border-radius: 20px;
+    padding: 20px;
+
+    
+}
+
+.Peficiencia{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size:20px ;
+    color: #ffffff;
+}
+.tltEficiencia{
+    
+    font-size: 2rem;
+    background-color: #0066FF;
+    border-radius: 10px;
+    width: 6rem;
+    justify-content: center;
+    align-items:center;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    color: #FFFFFF;
+    
+}
+
+
+
+.texto-eficiencia{
+    color: #ffffff;
+}
+
+.tltEficiencia img{
+    margin-left: 25px;
 
 }
+
+
+
+/*======================================================================*/
+.responsabilidade{
+    text-align: justify;
+    width: 11rem;
+    background-color: #DEC43B;
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+
+.tltResponsabilidade{
+   
+    font-size: 2rem;
+    background-color: #DEC43B;
+    border-radius: 10px;
+    width: 6rem;
+    justify-content: center;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tltResponsabilidade img{
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+}
+
+.texto-responsabilidade {
+    color: #ffffff;
+}
+
+
+/*======================================================================*/
+
+
+
+
+
+
+.Pagilidade{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size:20px ;
+    color: #ffffff;
+}
+
+
+
+
+.agilidade{
+    text-align: justify;
+    width: 11rem;
+    background-color: #0066FF;
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.tltAgilidade{
+    font-size: 2rem;
+    background-color: #0066FF;
+    border-radius: 10px;
+    width: 6rem;
+    justify-content: center;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.tltAgilidade img{
+     width: 50px;
+    height: 50px;
+    margin-left: 25px;
+
+}
+
+.texto-agilidade{
+    color: #ffffff;
+}
+
+
+
+/*Part 2*/
+
+.fundo{
+    background-color: #E7E7E7;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    
+    
+}
+
+.fundo img{
+    margin-left: 100px;
+    height: 300px;  
+    display: inline-block;
+
+}
+
+.fundo .texto{
+    padding-left: 20px;
+    font-size: 2rem;
+}
+
+
+/**FOOTER**/
 
 .footer{
     position: absolute;
     width: 100%;
     height: 9rem;
-    margin-top: auto;
-    background-color: #0D1721;
+    margin-top:28rem;
+    background-color: #0066FF;
+    margin-top: 35rem;
+    
     }
     
     .container-footer{
@@ -278,6 +345,9 @@ h1 {
     .paginas-footer{
         color: #ffffff;
         display: flex;
+        font-family: 'Poppins', sans-serif;
+        font-weight:200;
+        margin-top: 1rem;
     }
     
     .paginas-footer li, .paginas-footer a{
@@ -286,3 +356,9 @@ h1 {
         list-style: none;
         margin-right:4rem ;
     }
+
+
+
+
+
+
