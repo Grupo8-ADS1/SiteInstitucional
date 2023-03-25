@@ -5,15 +5,12 @@ body {
     padding: 0;
 }
 
-<<<<<<< HEAD
 :root {
     --colorAll: #3b3b3b;
     --colorBlue: #0066ff;
     --colorYellow:  #DEC43B;
 }
 
-=======
->>>>>>> f839f9cb3b7faabcba5c7fc9f39bb90e116ff10e
 /*HEADER ----------------------------------------------------------------*/
 .header {
     background-color: var(--colorBlue);
@@ -32,12 +29,7 @@ body {
 
 .navbar {
     display: flex;
-<<<<<<< HEAD
     justify-content: space-between;
-=======
-    width: 300px;
-    justify-content:space-between;
->>>>>>> f839f9cb3b7faabcba5c7fc9f39bb90e116ff10e
     align-items: center;
     list-style: none;
     text-align: start;
@@ -60,7 +52,6 @@ body {
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-<<<<<<< HEAD
 }
 
 .logo-header img {
@@ -77,13 +68,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     box-shadow: -1px 3px 11px -3px #606060;
-=======
-}  
-
-.teste{
-    width: 1rem;
-    
->>>>>>> f839f9cb3b7faabcba5c7fc9f39bb90e116ff10e
 }
 
 /*TITULO ----------------------------------------------------------------*/
@@ -94,7 +78,6 @@ body {
     font-size: 3rem;
 }
 
-<<<<<<< HEAD
 /*BNNER ---------------------------------------------------------------*/
 .banner {
     background-image: url('https://uploads-ssl.webflow.com/60c3d2d198ecc411de7f67bf/61020ab9005241c0e17a36a2_consultoria-em-tecnologia-da-informacao-o-que-e-e-quando-contratar.png');
@@ -129,13 +112,7 @@ body {
 
 }
 
-=======
->>>>>>> f839f9cb3b7faabcba5c7fc9f39bb90e116ff10e
 /*CONTEUDO ----------------------------------------------------------------*/
-.texto{
-    text-align: justify;
-    width: 20rem;
-}
 
 .context {
     margin-bottom: 10rem;
@@ -147,9 +124,9 @@ body {
     height: 100px;
     margin: auto;
     justify-content: space-between;
+    margin-top: 3rem;
 }
 
-<<<<<<< HEAD
 .missao {
     text-align: justify;
     width: 11rem;
@@ -238,25 +215,12 @@ body {
 
 .container-pt2 {
     width: 60%;
-=======
-.imagem1{
-    background-color: #0D1721;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-}
-
-.container-pt2{
-    display: flex;
-    width: 80%;
->>>>>>> f839f9cb3b7faabcba5c7fc9f39bb90e116ff10e
     height: 100px;
     margin: auto;
-    margin-top: 9rem;
     justify-content: space-between;
+    margin-top: 20rem;
 }
 
-<<<<<<< HEAD
 .tltTime {
     font-size: 2rem;
     display: flex;
@@ -375,16 +339,6 @@ body {
     font-size: 17px;
     color: var(--colorAll);
 }
-=======
-.imagem2{
-    background-color: #0D1721;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-}
-
-
->>>>>>> f839f9cb3b7faabcba5c7fc9f39bb90e116ff10e
 
 .texto-visao {
     font-family: 'Poppins', sans-serif;
@@ -429,7 +383,6 @@ body {
     position: absolute;
     width: 100%;
     height: 9rem;
-<<<<<<< HEAD
     margin-top: 28rem;
     background-color: var(--colorBlue);
     margin-top: 10rem;
@@ -483,45 +436,3 @@ hr {
     list-style: none;
     margin-right: 4rem;
 }
-=======
-    margin-top: auto;
-    background: #0D1721;
-    
-    }
-    
-    .container-footer{
-        display: flex;
-        width: 80%;
-        height: 100px;
-        margin: auto;
-    }
-    
-    .imagens{
-        background-color: #ffffff;
-        border-radius: 5px;
-        width: 10px;
-        height: 10px;
-    }
-    
-    .redes{
-        display:flex;
-        justify-content: space-around;
-        margin-top: -15px;
-    }
-    
-    hr{
-        height: 120px;
-    }
-    
-    .paginas-footer{
-        color: #ffffff;
-        display: flex;
-    }
-    
-    .paginas-footer li, .paginas-footer a{
-        color: #ffffff;
-        text-decoration: none;
-        list-style: none;
-        margin-right:4rem ;
-    }
->>>>>>> f839f9cb3b7faabcba5c7fc9f39bb90e116ff10e
