@@ -1,34 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,800&display=swap');
-body{
+
+body {
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --font-color: #3b3b3b;
-  }
+    --colorAll: #3b3b3b;
+    --colorBlue: #0066ff;
+    --colorYellow:  #DEC43B;
+}
 
 /*HEADER ----------------------------------------------------------------*/
-.header{
-    background-color: #0066FF;
-    mix-blend-mode: normal;
-    backdrop-filter: blur(2px);
+.header {
+    background-color: var(--colorBlue);
     height: 4.5rem;
 }
 
-.container{
+.container {
     display: flex;
     width: 80%;
     margin: auto;
 }
 
-.header .container{
+.header .container {
     justify-content: space-between;
 }
 
-.navbar{
+.navbar {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     text-align: start;
@@ -41,7 +42,8 @@ body{
     font-weight: 600;
 }
 
-.navbar li, .navbar a{
+.navbar li,
+.navbar a {
     color: #ffffff;
     text-decoration: none;
     display: flex;
@@ -50,15 +52,17 @@ body{
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-}  
-
-.teste{
-    width: 1rem;
 }
 
-.btn-login a{
-    
-    background-color: #DEC43B;
+.logo-header img {
+    margin-top: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+.btn-login a {
+
+    background-color: var(--colorYellow);
     padding: 5px;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
@@ -67,7 +71,7 @@ body{
 }
 
 /*TITULO ----------------------------------------------------------------*/
-.titulo-quem-somos{
+.titulo-quem-somos {
     display: flex;
     justify-content: right;
     margin-right: 9rem;
@@ -75,37 +79,46 @@ body{
 }
 
 /*BNNER ---------------------------------------------------------------*/
-.banner{
+.banner {
     background-image: url('https://uploads-ssl.webflow.com/60c3d2d198ecc411de7f67bf/61020ab9005241c0e17a36a2_consultoria-em-tecnologia-da-informacao-o-que-e-e-quando-contratar.png');
-    background-size: cover; /*imagem sempre ocupa toda a tela*/;
+    background-size: cover;
+    /*imagem sempre ocupa toda a tela*/
+    ;
     width: 100%;
     height: 50rem;
 }
 
-.banner .container{
+.banner .container {
     height: 500px;
-    justify-content: center; /*alinhar horizontal*/
-    align-items: center; /*alinha vertical*/
+    justify-content: center;
+    /*alinhar horizontal*/
+    align-items: center;
+    /*alinha vertical*/
 }
 
-.banner p{
+.banner p {
     font-size: 7rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     color: #ffffff;
 }
 
-.nomeEmpresa{
+.logo-empresa {
     margin-top: 15rem;
-    text-shadow: 1px 2px 20px #2d3cbd;
+    width: 25rem;
+    height: 26rem;
+    background-image: url('./img/LOGO_MERCURIO.png');
+    background-size: cover;
+
 }
+
 /*CONTEUDO ----------------------------------------------------------------*/
 
-.context{
+.context {
     margin-bottom: 10rem;
 }
 
-.container-pt1{
+.container-pt1 {
     display: flex;
     width: 80%;
     height: 100px;
@@ -114,93 +127,93 @@ body{
     margin-top: 3rem;
 }
 
-.missao{
+.missao {
     text-align: justify;
     width: 11rem;
 }
 
-.Pmissao{
+.Pmissao {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     padding: 5px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size:20px ;
+    font-size: 20px;
     color: #ffffff;
 }
 
-.Pvalores{
+.Pvalores {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     padding: 5px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size:20px ;
+    font-size: 20px;
     color: #ffffff;
 }
 
-.Pvisao{
+.Pvisao {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     padding: 5px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size:20px ;
+    font-size: 20px;
     color: #ffffff;
 }
 
-.visao{
+.visao {
     text-align: justify;
     width: 11rem;
-    
+
 }
 
-.valores{
+.valores {
     text-align: justify;
     width: 11rem;
 }
 
-.tltMissao{
+.tltMissao {
     box-shadow: -1px 3px 11px -3px #606060;
     font-size: 2rem;
-    background-color: #0066FF;
+    background-color: var(--colorBlue);
     border-radius: 10px;
     width: 6rem;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.tltValores{
+.tltValores {
     box-shadow: -1px 3px 11px -3px #606060;
     font-size: 2rem;
-    background-color: #0066FF;
+    background-color: var(--colorBlue);
     border-radius: 10px;
     width: 6rem;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 
 }
 
-.tltVisao{
+.tltVisao {
     box-shadow: -1px 3px 11px -3px #606060;
     font-size: 2rem;
-    background-color: #DEC43B;
+    background-color: var(--colorYellow);
     border-radius: 10px;
     width: 6rem;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.container-pt2{
+.container-pt2 {
     width: 60%;
     height: 100px;
     margin: auto;
@@ -208,23 +221,23 @@ body{
     margin-top: 20rem;
 }
 
-.tltTime{
+.tltTime {
     font-size: 2rem;
     display: flex;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-    font-weight:600;
-    font-size:2rem;
-    color: var(--font-color);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--colorAll);
 }
 
-.time-fotos{
+.time-fotos {
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
 }
 
-.integrante{
+.integrante {
     width: 8rem;
     height: 8rem;
     background-color: #353535;
@@ -232,144 +245,194 @@ body{
     justify-content: space-between;
     display: flex;
     font-family: 'Poppins', sans-serif;
-    font-weight:300;
-    color: var(--font-color);
+    font-weight: 300;
+    color: var(--colorAll);
     box-shadow: -1px 3px 11px -3px #000000;
 }
 
-.grupo1{
+.grupo1 {
     display: flex;
     justify-content: space-evenly;
 }
 
-.grupo2{
+.grupo2 {
     display: flex;
     margin-top: 4rem;
     justify-content: space-evenly;
 }
 
-.int1 p{
+.int1 p {
     align-items: center;
     margin-top: 9rem;
     margin-left: auto;
     margin-right: auto;
 }
 
-.int2{
+.int1 {
+    background-image: url('./img/amanda.jpg');
+    background-size: cover;
+}
+
+.int2 {
     background-image: url('./img/evelyn.jpg');
     background-size: cover;
 }
 
-.int2 p{
+.int2 p {
     align-items: center;
     margin-top: 9rem;
     margin-left: auto;
     margin-right: auto;
 }
-.int3 p{
+
+.int3 p {
     align-items: center;
     margin-top: 9rem;
     margin-left: auto;
     margin-right: auto;
 }
+
 .int3 {
     background-image: url('./img/felipe.png');
     background-size: cover;
 }
-.int4 p{
+
+.int4 p {
     align-items: center;
     margin-top: 9rem;
     margin-left: auto;
     margin-right: auto;
 }
-.int5 p{
+
+.int4  {
+    background-image: url('./img/gustavo.jpg');
+    background-size: cover;
+}
+
+.int5 p {
     align-items: center;
     margin-top: 9rem;
     margin-left: auto;
     margin-right: auto;
 }
+
 .int5 {
     background-image: url('./img/joao.jpg');
     background-size: cover;
 }
-.int6 p{
+
+.int6 p {
     align-items: center;
     margin-top: 9rem;
     margin-left: auto;
     margin-right: auto;
 }
-.int6{
+
+.int6 {
     background-image: url('./img/lucio.jpg');
     background-size: cover;
 }
 
-.texto-missao{
+.texto-missao {
     font-family: 'Poppins', sans-serif;
-    font-weight:300;
-    font-size:17px ;
-    color: var(--font-color);
-}
-.texto-visao{
-    font-family: 'Poppins', sans-serif;
-    font-weight:300;
-    font-size:17px ;
-    color: var(--font-color);
-}
-.texto-valores{
-    font-family: 'Poppins', sans-serif;
-    font-weight:300;
-    font-size:17px ;
-    color: var(--font-color);
+    font-weight: 300;
+    font-size: 17px;
+    color: var(--colorAll);
 }
 
+.texto-visao {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: var(--colorAll);
+}
+
+.texto-valores {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: var(--colorAll);
+}
+
+/*CHAT  ----------------------------------------------------------------*/
+.chat-div{
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   display: flex;
+}
+
+#btnChat{
+    margin-top: 30rem;
+    width:13rem;
+    height: 3rem;
+    background-color: #0066ff;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+
+
+
 /*FOOTER  ----------------------------------------------------------------*/
-.footer{
+.footer {
     position: absolute;
     width: 100%;
     height: 9rem;
-    margin-top:28rem;
-    background-color: #0066FF;
-    margin-top: 35rem;
-    
-    }
-    
-    .container-footer{
-        display: flex;
-        width: 80%;
-        height: 100px;
-        margin: auto;
-    }
-    
-    .imagens{
-        background-color: #ffffff;
-        border-radius: 5px;
-        width: 10px;
-        height: 10px;
-    }
-    
-    .redes{
-        display:flex;
-        justify-content: space-around;
-        margin-top: -15px;
-    }
-    
-    hr{
-        height: 120px;
-    }
-    
-    .paginas-footer{
-        color: #ffffff;
-        display: flex;
-        font-family: 'Poppins', sans-serif;
-        font-weight:200;
-        margin-top: 1rem;
-    }
-    
-    .paginas-footer li, .paginas-footer a{
-        color: #ffffff;
-        text-decoration: none;
-        list-style: none;
-        margin-right:4rem ;
-    }
+    margin-top: 28rem;
+    background-color: var(--colorBlue);
+    margin-top: 10rem;
 
-    
+}
+
+.logo-footer img{
+    margin-top: 2rem;
+    width: 10rem;
+    height: 3rem;
+
+}
+
+.container-footer {
+    display: flex;
+    width: 80%;
+    height: 100px;
+    margin: auto;
+}
+
+.imagens {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+hr {
+    height: 120px;
+}
+
+.paginas-footer {
+    color: #ffffff;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.paginas-footer li,
+.paginas-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 4rem;
+}

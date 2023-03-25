@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem somos?</title>
+    <title>Quem somos</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleChat.css">
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,7 +16,7 @@
 
     <div class="header">
         <div class="container">
-            <h1 class="titulo">Mercúrio</h1>
+            <div class="logo-header"><img src="./img/LOGO_COMPLETA.png" alt="" srcset=""></div>
             <ul class="navbar">
                 <li><a style="width: 110px;" href="">Home</a></li>
                 <li><a style="width: 180px;" href="">Nossos projetos</a></li>
@@ -28,7 +29,8 @@
 
     <div class="banner">
         <div class="container">
-            <p class="nomeEmpresa">Mercúrio</p>
+            <!-- <p class="nomeEmpresa">Mercúrio</p> -->
+            <div class="logo-empresa"></div>
         </div>
     </div>
 
@@ -74,54 +76,110 @@
                     <div class="integrante int1">
                         <p class="nomeIntegrante">Amanda Godoy</p>
                     </div>
-                    <div class="integrante int2"><p class="nomeIntegrante">Evelyn Farias</p></div>
-                    <div class="integrante int3"><p class="nomeIntegrante">Felipe Andrade</p></div>
+                    <div class="integrante int2">
+                        <p class="nomeIntegrante">Evelyn Farias</p>
+                    </div>
+                    <div class="integrante int3">
+                        <p class="nomeIntegrante">Felipe Andrade</p>
+                    </div>
                 </div>
 
                 <div class="grupo2">
-                    <div class="integrante int4"><p class="nomeIntegrante">Gustavo Costa</p></div>
-                    <div class="integrante int5"><p class="nomeIntegrante">João Vitor</p></div>
-                    <div class="integrante int6"><p class="nomeIntegrante">Lúcio Garcia</p></div>
+                    <div class="integrante int4">
+                        <p class="nomeIntegrante">Gustavo Costa</p>
+                    </div>
+                    <div class="integrante int5">
+                        <p class="nomeIntegrante">João Vitor</p>
+                    </div>
+                    <div class="integrante int6">
+                        <p class="nomeIntegrante">Lúcio Garcia</p>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="chat-div">
+            <button id="btnChat" onclick="teste()">Estou com dúvidas</button>
+            <div id="div_chat"></div>
         </div>
 
         <div class="footer">
-        <div class="container-footer">
+            <div class="container-footer">
 
-            <div class="empresa">
-                <h1 class="titulo">Mercúrio</h1>
+                <div class="empresa">
+                    <div class="logo-footer"><img src="./img/LOGO_COMPLETA.png" alt="" srcset=""></div>
 
-                <div class="redes">
-                    <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="paginas-footer">
-                <div class="paginas">
-
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Simulador Financeiro</a></li>
-                        <li><a href="">Cadastre-se</a></li>
-                    </ul>
+                    <div class="redes">
+                        <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                    </div>
                 </div>
 
-                <div class="informacoes">
-                    <ul>
-                        <li><a href="">Quem Somos</a></li>
-                        <li><a href="">Fale conosco</a></li>
-                    </ul>
+                <hr>
+
+                <div class="paginas-footer">
+                    <div class="paginas">
+
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Simulador Financeiro</a></li>
+                            <li><a href="">Cadastre-se</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="informacoes">
+                        <ul>
+                            <li><a href="">Quem Somos</a></li>
+                            <li><a href="">Fale conosco</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 </body>
 
 </html>
+
+<script>
+
+    function teste() {
+        div_chat.innerHTML = `
+
+    <div class="chat">
+        <div class="container-chat">
+            <div class="header-chat">
+                <div class="container-header">
+                    <span class="titulo">Chat</span>
+                </div>
+            </div>
+            <div class="perguntas">
+                <div class="pergunta pt1">
+                    <p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                <div class="pergunta pt2">
+                    <p class="textoPergunta txtP2">Não consigo acessar o Dashboard</p>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                <div class="pergunta pt3">
+                    <p class="textoPergunta txtP3">Não consigo acessar o Dashboard</p>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                
+            </div>
+            <div class="footer-chat">
+                <div class="container-footer">
+                    <span class="entrar-contato">Ainda com dúvida? <a href="">Entre em contato</a> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    `;
+    }
+
+</script>
