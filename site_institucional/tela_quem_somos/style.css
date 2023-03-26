@@ -11,6 +11,12 @@ body {
     --colorYellow:  #DEC43B;
 }
 
+a, button{
+    cursor: pointer;
+}
+
+
+
 /*HEADER ----------------------------------------------------------------*/
 .header {
     background-color: var(--colorBlue);

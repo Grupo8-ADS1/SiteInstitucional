@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 /*HEADER ----------------------------------------------------------------*/
 .header {
     background-color: #0066FF;
@@ -62,6 +66,16 @@ body {
     box-shadow: -1px 3px 11px -3px #606060;
 }
 
+.logo-header img {
+    margin-top: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
 /*Banner*/
 .banner {
     background-image: url('./Frame\ 1.png');
@@ -112,6 +126,8 @@ button{
     border: none;
     border-radius: 20px;
 }
+
+
 
 /*Conteudo*/
 

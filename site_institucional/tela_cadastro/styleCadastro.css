@@ -9,6 +9,10 @@ body{
     background-size: cover;
 }
 
+a, button{
+    cursor: pointer;
+}
+
 
 
 .header {
@@ -109,6 +113,13 @@ body{
 }
 
 
+.logo-header img {
+    margin-top: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+
 
 
 
@@ -136,7 +147,6 @@ body{
         border: 1px grey solid;
         padding: 8px;
         margin: 5px;
-
     }
 
     .formulario button {

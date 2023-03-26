@@ -9,6 +9,10 @@ body{
     background-size: cover;
 }
 
+a, button{
+    cursor: pointer;
+}
+
 
 
 .header {
@@ -106,6 +110,12 @@ body{
     margin-left: 75%;
     padding: 10px;
     text-decoration: none;
+}
+
+.logo-header img {
+    margin-top: 0.5rem;
+    width: 10rem;
+    height: 3rem;
 }
 
 
