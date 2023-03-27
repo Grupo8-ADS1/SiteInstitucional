@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="styleChat.css">
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,8 +18,9 @@
             <div class="logo-header"><img src="./LOGO_COMPLETA.png" alt=""> </div>
             <ul class="navbar">
                 <li><a style="width: 110px;" href="../tela_home/home.html">Home</a></li>
-                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html" >QuemSomos</a></li>
-                <li><a style="width: 180px;" href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador</a></li>
+                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html">Quem Somos</a></li>
+                <li><a style="width: 180px;"
+                        href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador</a></li>
                 <li class="btn-login"><a style="width: 110px;" href="../tela_login/login.html">Login</a></li>
             </ul>
         </div>
@@ -29,7 +31,7 @@
 
     <div class="banner">
         <div class="container">
-            <p class="frase">Solução IoT para sua empresa! </p>
+            <p class="frase">Inovando o mercado <br> varejista! </p>
 
         </div>
     </div>
@@ -40,7 +42,7 @@
 
     <div class="context">
 
-        <h1>Conheça nossas vantagens </h1>
+        <h1 class="vantagens_tlt">Conheça nossas vantagens</h1>
 
         <div class="container-pt1">
 
@@ -51,12 +53,11 @@
 
                 <div class="tltEficiencia">
                     <img src="./kisspng-computer-icons-chart-statistics-clip-art-portable-5bac0fa56e1e00 1.png" alt="">
-                    <p class="Peficiencia">Eficiencia</p>
+                    <p class="Peficiencia">Eficiência</p>
                 </div>
 
                 <span class="texto-eficiencia">Lorem ab Nisi recusandae
-                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae
-                    ducimus aliquid odio distinctio nemo!</span>
+                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae</span>
             </div>
 
             <div class="responsabilidade">
@@ -66,8 +67,7 @@
                 </div>
 
                 <span class="texto-responsabilidade">Lorem ab Nisi recusandae
-                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae
-                    ducimus aliquid odio distinctio nemo!</span>
+                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae</span>
             </div>
 
             <div class="agilidade">
@@ -78,8 +78,7 @@
                 </div>
 
                 <span class="texto-agilidade">Lorem ab Nisi recusandae
-                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae
-                    ducimus aliquid odio distinctio nemo!</span>
+                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae</span>
             </div>
         </div>
 
@@ -102,6 +101,11 @@
         </div>
 
 
+    </div>
+
+    <div class="chat-div">
+        <button style="margin-left: auto; margin-right: auto; display: flex;margin-top: 3rem; " id="btnChat" onclick="teste()">Estou com dúvidas</button>
+        <div  id="div_chat"></div>
     </div>
 
     <!--Footer-->
@@ -127,7 +131,8 @@
 
                     <ul>
                         <li><a href="../tela_home/home.html">Home</a></li>
-                        <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador Financeiro</a></li>
+                        <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador
+                                Financeiro</a></li>
                         <li><a href="../tela_cadastro/cadastro.html">Cadastre-se</a></li>
                     </ul>
                 </div>
@@ -141,14 +146,47 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
 </body>
 
 </html>
+
+<script>
+
+    function teste() {
+        div_chat.innerHTML = `
+
+        <div class="chat" style="margin-left: 35rem; z-index:7;>
+        <div class="container-chat" ">
+            <div class="header-chat">
+                <div class="container-header">
+                    <span class="titulo">Chat</span>
+                </div>
+            </div>
+            <div class="perguntas">
+                <div class="pergunta pt1">
+                    <a href=""><p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                <div class="pergunta pt2">
+                    <a href=""><p class="textoPergunta txtP2">Esqueci minha senha</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                <div class="pergunta pt3">
+                    <a href=""><p class="textoPergunta txtP3">Não consigo fazer meu cadastro</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                
+            </div>
+            <div class="footer-chat">
+                <div class="container-footer">
+                    <span class="entrar-contato">Ainda com dúvida? <a href="">Entre em contato</a> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    `;
+    }
+
+</script>

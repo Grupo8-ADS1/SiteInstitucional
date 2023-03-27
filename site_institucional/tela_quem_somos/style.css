@@ -91,7 +91,7 @@ a, button{
     /*imagem sempre ocupa toda a tela*/
     ;
     width: 100%;
-    height: 50rem;
+    height: 35rem;
 }
 
 .banner .container {
@@ -110,10 +110,10 @@ a, button{
 }
 
 .logo-empresa {
-    margin-top: 15rem;
-    width: 25rem;
-    height: 26rem;
-    background-image: url('./img/LOGO_MERCURIO.png');
+    margin-top: 2rem;
+    width: 46REM;
+    height: 11.2rem;
+    background-image: url('./img/LOGO_AZUL_BRANCO.png');
     background-size: cover;
 
 }
