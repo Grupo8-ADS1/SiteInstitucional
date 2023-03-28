@@ -8,11 +8,7 @@ body{
 
 
 body{
-<<<<<<< HEAD
-    background-image: url('./Frame\ 2.png');
-=======
     background-image: url('https://blog.ciss.com.br/wp-content/uploads/2018/08/blog-ciss-layout-gondolas-supermercado.jpg');
->>>>>>> d24082fa5985ac952d139afc30583464d295a6fa
     background-size: cover;
 }
 
@@ -23,7 +19,7 @@ a, button{
 
 
 .header {
-    background-color: #0066FF;
+    background-color: #0066ff;
     mix-blend-mode: normal;
     backdrop-filter: blur(2px);
     height: 4.5rem;
@@ -140,11 +136,7 @@ a, button{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-<<<<<<< HEAD
-        font-family: 'Poppins', sans-serif;
-=======
         box-shadow: -1px 3px 11px -3px #60606081;
->>>>>>> d24082fa5985ac952d139afc30583464d295a6fa
     }
 
     .formulario input{
