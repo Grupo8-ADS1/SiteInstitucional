@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,800&display=swap');
+
+
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +8,11 @@ body{
 
 
 body{
+<<<<<<< HEAD
     background-image: url('./Frame\ 2.png');
+=======
+    background-image: url('https://blog.ciss.com.br/wp-content/uploads/2018/08/blog-ciss-layout-gondolas-supermercado.jpg');
+>>>>>>> d24082fa5985ac952d139afc30583464d295a6fa
     background-size: cover;
 }
 
@@ -118,10 +125,6 @@ a, button{
     height: 3rem;
 }
 
-
-
-
-
     /*Formulario*/
 
     .formulario{
@@ -137,7 +140,11 @@ a, button{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+<<<<<<< HEAD
         font-family: 'Poppins', sans-serif;
+=======
+        box-shadow: -1px 3px 11px -3px #60606081;
+>>>>>>> d24082fa5985ac952d139afc30583464d295a6fa
     }
 
     .formulario input{
@@ -157,18 +164,29 @@ a, button{
         height: 40px;
         display: flex;
         justify-content: center;
-        margin-left: 25%;
+        margin-left: 35%;
         margin-top: 10px;
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         border: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
         
     }
 
     .formulario a{
         text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .formulario span{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
     }
 
     .selecao {
@@ -183,6 +201,9 @@ a, button{
 
     .formulario h1{
         font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #3b3b3b;
     }
 
 
@@ -244,4 +265,32 @@ a, button{
         text-decoration: none;
         list-style: none;
         margin-right: 4rem;
+    }
+
+
+    /*LOGIN ----------------------------------------------------------------------*/
+    .input {
+        position: absolute;
+        background-color: transparent;
+    }
+      
+    .input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+      
+    .icon {
+        padding: 10px;
+        padding-left: 20px;
+        
+    }
+      
+    .input{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    form{
+        margin-left: -90px;
     }
