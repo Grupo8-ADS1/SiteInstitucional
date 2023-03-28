@@ -5,7 +5,7 @@ body{
 
 
 body{
-    background-image: url('./c4881348b45e0e6ea14654fff9389faa.png');
+    background-image: url('./Frame\ 2.png');
     background-size: cover;
 }
 
@@ -137,6 +137,7 @@ a, button{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-family: 'Poppins', sans-serif;
     }
 
     .formulario input{
