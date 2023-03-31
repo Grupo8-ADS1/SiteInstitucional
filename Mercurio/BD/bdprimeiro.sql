@@ -2,8 +2,8 @@ use mercurio;
 
 create table sensor (
 idSensor int primary key auto_increment,
-fkEspaco int not null
--- fkHistorico int not null
+-- fkHistorico int not null,
+fkEspaco varchar(20) not null, constraint chkNivel check (fkEspaco in ('Entrada','Saida'))
 );
 
 
@@ -13,19 +13,32 @@ nomeUsuario varchar(50)  not null unique,
 senhaUsuario varchar(20) not null,
 emailUsuario varchar(30) not null unique,
 nivelUsuario varchar(20) not null, constraint chkNivel check (nivelUsuario in ('GerenteRegional','GerenteLocal'))
+-- fkEmpresa
 );
 
 
 create table espaco (
 idEspaco int primary key auto_increment,
 setor varchar(50) not null,
+fkSensor int not null
 );
 
 
-create table historico (
-idHistorico int primary key auto_increment,
-dhHistorico datetime default current_timestamp,
+
+create table empresa (
+idEmpresa int primary key auto_increment,
+razaoSocial varchar(50) not null,
+emailEmpresa varchar(50) not null,
+senhaEmpresa varchar(50) not null
 );
+
+create table captacao(
+fkSensor int not null,
+dtCaptacao datetime default current_timestamp,
+fkEmpresa int 
+);
+
+
 
 insert into usuario values 
 (null,'João Vitor Cordeiro','123456789','joao.cordeiro@sptech.school','GerenteRegional'),
