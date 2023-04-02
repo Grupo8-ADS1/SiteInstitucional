@@ -6,13 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador Financeiro</title>
+    
 </head>
 
-<body>
-    Faturamento Mensal: <input id="inputFaturamentoMensal">
-    Numero de vendas: <input id="inputNumVendas">
-    <button onclick="calcular()">Simule Agora</button>
-    <div id="resultadoSimulacao"></div>
+
+
+
+
+
+
+
+
+    <center>
+        <h1>Calculadora Financeira Mercúrio</h1>
+        <div class="simulador">
+            Faturamento Mensal: <input id="inputFaturamentoMensal">
+            Numero de vendas: <input id="inputNumVendas">
+            <button onclick="calcular()">Simule Agora</button>
+            <div id="resultadoSimulacao"></div>
+        </div>
+    </center>
+
+
+    
+
+
+
+
+
+
 
 
 </body>
@@ -25,28 +47,44 @@
     var faturamentoMensalExperimento;
     var ticketMedioControle;
     var ticketMedioExperimento;
-    var faturamentoTrimestral;
-    var faturamentoSemestral;
-    var faturamentoAnual;
+    var faturamentoTrimestralExperimento;
+    var faturamentoSemestralExperimento;
+    var faturamentoAnualExperimento;
+    var faturamentoTrimestralControle;
+    var faturamentoSemestralControle;
+    var faturamentoAnualControle
+
+
 
     function calcular() {
         numVendas = Number(inputNumVendas.value);
         faturamentoMensalControle = Number(inputFaturamentoMensal.value);
+
         ticketMedioControle = faturamentoMensalControle / numVendas;
         ticketMedioExperimento = ticketMedioControle * 1.45;
-        faturamentoMensalExperimento = faturamentoMensalControle * 1.45;
-        faturamentoTrimestral = faturamentoMensalExperimento * 3;
-        faturamentoSemestral = faturamentoMensalExperimento * 6;
-        faturamentoAnual = faturamentoMensalExperimento * 12;
-        resultadoSimulacao.innerHTML = `
-        Após analisarmos os dados do seu estabelecimento, constatamos que o ticket médio dos seus clientes é de ${ticketMedioControle}. <br> 
-        No entanto, com um aumento na satisfação dos seus clientes, esse valor poderia ser elevado para ${ticketMedioExperimento}. <br>
-        Isso significa que, ao investir em melhorias que satisfaçam seus clientes, é possível obter um faturamento mensal de ${faturamentoMensalExperimento}, <br> 
-        trimestral de ${faturamentoTrimestral}, <br> 
-        semestral de ${faturamentoSemestral} <br>
-        e anual de ${faturamentoAnual}. <br>
 
-        Acreditamos que essa oportunidade de melhorar seus resultados financeiros seja um grande incentivo para investir em ações que possam aumentar a satisfação dos seus clientes e, consequentemente, elevar o ticket médio do seu estabelecimento. Nós da Mercurio estamos à disposição para ajudá-lo nesse processo e transformar esses dados em resultados concretos.
+        faturamentoMensalExperimento = faturamentoMensalControle * 1.45;
+        faturamentoTrimestralExperimento = faturamentoMensalExperimento * 3;
+        faturamentoSemestralExperimento = faturamentoMensalExperimento * 6;
+        faturamentoAnualExperimento = faturamentoMensalExperimento * 12;
+
+        faturamentoTrimestralControle = faturamentoMensalControle * 3
+        faturamentoSemestralControle = faturamentoMensalControle * 6
+        faturamentoAnualControle = faturamentoMensalControle * 12
+
+
+
+        resultadoSimulacao.innerHTML = `
+        <div class="inner">
+        Após análise dos dados do seu estabelecimento, verificamos que o ticket médio dos seus clientes é de <b>${(ticketMedioControle).toFixed(2)}</b>.
+        Porém, ao promover melhorias que visem aumentar a satisfação dos clientes, esse valor pode ser elevado para <b>${(ticketMedioExperimento).toFixed(2)}</b>. 
+        <br>
+        <br>
+        Isso resultaria em um aumento significativo do faturamento mensal, que antes era de <b>${faturamentoMensalControle}</b> e passaria a ser <b>${(faturamentoMensalExperimento).toFixed(2)}</b>. O mesmo ocorreria com o faturamento trimestral: <b>${(faturamentoTrimestralControle).toFixed(2)}</b> passaria a ser <b>${(faturamentoTrimestralExperimento).toFixed(2)}</b>, semestral: <b>${(faturamentoSemestralControle).toFixed(2)}</b> passaria a ser <b>${(faturamentoSemestralExperimento).toFixed(2)}</b> e anual: <b>${(faturamentoAnualControle).toFixed(2)}</b> passaria a ser <b>${(faturamentoAnualExperimento).toFixed(2)}</b>, que aumentariam consideravelmente em relação aos valores anteriores.
+        <br>
+        <br>
+        Essa é uma oportunidade valiosa para investir em ações que possam elevar a satisfação dos seus clientes e, consequentemente, aumentar o faturamento do seu estabelecimento. A equipe Mercúrio está à disposição para auxiliá-lo nesse processo e transformar esses dados em resultados reais. Acreditamos que esse seja um passo importante para impulsionar o seu negócio e alcançar o sucesso desejado.
+        </div>
         `
 
 
@@ -55,3 +93,25 @@
     }
 </script>
 
+<style>
+    #resultadoSimulacao {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        background-color: #E0D079;
+        color: #4D4B4B;
+    }
+
+    .inner {
+        padding: 20px;
+    }
+
+    .simulador {
+        margin-top: 40px;
+    }
+
+
+
+
+</style>
