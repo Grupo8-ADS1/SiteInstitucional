@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+</head>
+
+<body>
+    Faturamento Mensal: <input id="inputFaturamentoMensal">
+    Numero de vendas: <input id="inputNumVendas">
+    <button onclick="calcular()">Simule Agora</button>
+    <div id="resultadoSimulacao"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    var numVendas;
+    var faturamentoMensalControle;
+    var faturamentoMensalExperimento;
+    var ticketMedioControle;
+    var ticketMedioExperimento;
+    var faturamentoTrimestral;
+    var faturamentoSemestral;
+    var faturamentoAnual;
+
+    function calcular() {
+        numVendas = Number(inputNumVendas.value);
+        faturamentoMensalControle = Number(inputFaturamentoMensal.value);
+        ticketMedioControle = faturamentoMensalControle / numVendas;
+        ticketMedioExperimento = ticketMedioControle * 1.45;
+        faturamentoMensalExperimento = faturamentoMensalControle * 1.45;
+        faturamentoTrimestral = faturamentoMensalExperimento * 3;
+        faturamentoSemestral = faturamentoMensalExperimento * 6;
+        faturamentoAnual = faturamentoMensalExperimento * 12;
+        resultadoSimulacao.innerHTML = `
+        Após analisarmos os dados do seu estabelecimento, constatamos que o ticket médio dos seus clientes é de ${ticketMedioControle}. <br> 
+        No entanto, com um aumento na satisfação dos seus clientes, esse valor poderia ser elevado para ${ticketMedioExperimento}. <br>
+        Isso significa que, ao investir em melhorias que satisfaçam seus clientes, é possível obter um faturamento mensal de ${faturamentoMensalExperimento}, <br> 
+        trimestral de ${faturamentoTrimestral}, <br> 
+        semestral de ${faturamentoSemestral} <br>
+        e anual de ${faturamentoAnual}. <br>
+
+        Acreditamos que essa oportunidade de melhorar seus resultados financeiros seja um grande incentivo para investir em ações que possam aumentar a satisfação dos seus clientes e, consequentemente, elevar o ticket médio do seu estabelecimento. Nós da Mercurio estamos à disposição para ajudá-lo nesse processo e transformar esses dados em resultados concretos.
+        `
+
+
+
+
+    }
+</script>
+
