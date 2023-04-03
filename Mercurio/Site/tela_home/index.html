@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style_index.css">
+    <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="header">
+        <div class="container">
+            <div class="logo-header"><img src="./assets/img/login/LOGO_COMPLETA.png" alt=""> </div>
+            <ul class="navbar">
+                <li><a style="width: 110px;" href="">Home</a></li>
+                <li><a style="width: 180px;" href="">Quem Somos</a></li>
+                <li><a style="width: 180px;" href="">Simulador</a></li>
+                <li><a style="width: 180px; color: #DEC43B;" href="">Cadastre-se</a></li>
+                <li class="btn-login"><a style="width: 110px;" href="./login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--banner-->
+
+    <div class="banner">
+        <div class="container">
+            
+            <p class="frase">Inovando o mercado <br> varejista e atacadista! </p>
+
+        </div>
+    </div>
+</div>
+    <a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html"><button>Simule agora</button></a>
+
+    <!--Conteudo-->
+
+    <div class="context">
+
+        <h1 class="vantagens_tlt">Conheça nossas vantagens</h1>
+
+        <div class="container-pt1">
+
+
+
+            <div class="lucros">
+
+
+                <div class="tela-lucros">
+                    <img src="./assets/img/index/lucros.png" alt="">
+                    <p class="Plucros"></p>
+                </div>
+
+                <span class="texto-lucros">Lorem ab Nisi recusandae
+                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae</span>
+            </div>
+
+            <div class="responsabilidade">
+                <div class="tela_responsabilidade">
+                    <img src="./assets/img/index/maos.png" alt="">
+                    <p class="Presponsabilidade">Responsabilidade</p>
+                </div>
+
+                <span class="texto-responsabilidade">Lorem ab Nisi recusandae
+                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae</span>
+            </div>
+
+            <div class="pesquisa">
+
+                <div class="tela-pesquisa">
+                    <img src="./assets/img/index/grafico.png" alt="">
+                    <p style="color: #4B1761" class="Ppesquisa" >Agilidade</p>
+                </div>
+
+                <span class="texto-pesquisa">Lorem ab Nisi recusandae
+                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae</span>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!--Conteudo part 2-->
+
+
+    <div class="fundo">
+        <img src="" alt="">
+
+        <div class="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eos alias omnis tempora quidem explicabo quas
+            quis sequi a ab consectetur provident fugit illo culpa laboriosam aut, dolore iste illum? Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Sed officia quia expedita. Soluta corrupti porro sint iusto iste
+            voluptate numquam officiis, dolore nulla temporibus tempora accusamus repellendus unde deserunt cum?
+        </div>
+
+
+    </div>
+
+    <div class="chat-div">
+        <button style="margin-left: auto; margin-right: auto; display: flex;margin-top: 3rem; " id="btnChat" onclick="teste()">Estou com dúvidas</button>
+        <div  id="div_chat"></div>
+    </div>
+
+    <!--Footer-->
+
+    <div class="footer">
+        <div class="container-footer">
+
+            <div class="empresa">
+                <div class="logo-footer"><img src="./assets/img/login/LOGO_COMPLETA.png" alt="" srcset=""></div>
+
+                <div class="redes">
+                    <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="paginas-footer">
+                <div class="paginas">
+
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Simulador</a></li>
+                        <li><a style="color:#DEC43B"; href="">Cadastre-se</a></li>
+                    </ul>
+                </div>
+
+                <div class="informacoes">
+                    <ul>
+                        <li><a href="../tela_quem_somos/quemSomos.html">Quem Somos</a></li>
+                        <li><a href="">Fale conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function teste() {
+        div_chat.innerHTML = `
+        <div class="chat">
+        <div class="container-chat" ">
+            <div class="header-chat">
+                <div class="container-header">
+                    <span class="titulo">Chat</span>
+                </div>
+            </div>
+            <div class="perguntas">
+                <div class="pergunta pt1">
+                    <a href=""><p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                <div class="pergunta pt2">
+                    <a href=""><p class="textoPergunta txtP2">Esqueci minha senha</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                <div class="pergunta pt3">
+                    <a href=""><p class="textoPergunta txtP3">Não consigo fazer meu cadastro</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                </div>
+                
+            </div>
+            <div class="footer-chat">
+                <div class="container-footer">
+                    <span class="entrar-contato">Ainda com dúvida? <a href="">Entre em contato</a> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    `;
+    }
+
+</script>

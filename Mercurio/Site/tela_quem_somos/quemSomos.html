@@ -16,11 +16,14 @@
 
     <div class="header">
         <div class="container">
-            <div class="logo-header"><a href="../tela_home/home.html"><img src="./img/LOGO_COMPLETA.png" alt="" srcset=""></a></div>
+            <div class="logo-header"><a href="../tela_home/home.html"><img src="./img/LOGO_COMPLETA.png" alt=""
+                        srcset=""></a></div>
             <ul class="navbar">
                 <li><a style="width: 110px;" href="../tela_home/home.html">Home</a></li>
-                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html" >QuemSomos</a></li>
-                <li><a style="width: 180px;" href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador</a></li>
+                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html">QuemSomos</a></li>
+                <li><a style="width: 180px;"
+                        href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador</a></li>
+                <li><a style="width: 180px; color: #DEC43B;" href="../tela_cadastro/cadastro.html">Cadastrar</a></li>
                 <li class="btn-login"><a style="width: 110px;" href="../tela_login/login.html">Login</a></li>
             </ul>
         </div>
@@ -29,8 +32,7 @@
 
     <div class="banner">
         <div class="container">
-            <!-- <p class="nomeEmpresa">Mercúrio</p> -->
-            <div class="logo-empresa"></div>
+            <p class="nomeEmpresa">Mercúrio</p>
         </div>
     </div>
 
@@ -67,7 +69,23 @@
                     ducimus aliquid odio distinctio nemo!</span>
             </div>
         </div>
+    </div>
 
+    <div class="conhecaNois">
+        <img class="vector" src="img/Vector.png" alt="">
+        <div class="container-pt3">
+            <div class="conheca">
+                <h2 class="tltConheca">Conheça a Mercúrio
+                    <img class="Imgline" src="img/Line 2.png" alt="">
+                </h2>
+                <span class="texto-conheca">Lorem ab Nisi recusandae
+                    ducimus aliquid odio distinctio nemo!Lorem ab Nisi recusandae
+                    ducimus aliquid odio distinctio nemo!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="nossoTime">
         <div class="container-pt2">
             <span class="tltTime">Nosso time</span>
 
@@ -97,12 +115,21 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="vectorFinal">
         <div class="chat-div">
-            <button id="btnChat" onclick="teste()">Estou com dúvidas</button>
+            <h2 class="interesse">Se interessou? Venha fazer parte!</h2>
+            <div class="botoesInteresse">
+                <button id="btnCadastro"><a href="../tela_cadastro/cadastro.html">Cadastro</a></button>
+
+                <button id="btnChat" onclick="teste()">Fale Conosco</button>
+            </div>
             <div id="div_chat"></div>
         </div>
+    </div>
 
+    <div class="vectorFinal2">
         <div class="footer">
             <div class="container-footer">
 
@@ -124,7 +151,8 @@
 
                         <ul>
                             <li><a href="../tela_home/home.html">Home</a></li>
-                            <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador Financeiro</a></li>
+                            <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador
+                                    Financeiro</a></li>
                             <li><a href="../tela_cadastro/cadastro.html">Cadastre-se</a></li>
                         </ul>
                     </div>
@@ -138,13 +166,13 @@
                 </div>
             </div>
         </div>
+    </div>
 
 </body>
 
 </html>
 
 <script>
-
     function teste() {
         div_chat.innerHTML = `
 
@@ -158,15 +186,15 @@
             <div class="perguntas">
                 <div class="pergunta pt1">
                     <a href=""><p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p></a>
-                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                    <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
                 <div class="pergunta pt2">
                     <a href=""><p class="textoPergunta txtP2">Esqueci minha senha</p></a>
-                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                    <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
                 <div class="pergunta pt3">
                     <a href=""><p class="textoPergunta txtP3">Não consigo fazer meu cadastro</p></a>
-                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                    <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
                 
             </div>
@@ -181,5 +209,4 @@
     
     `;
     }
-
 </script>

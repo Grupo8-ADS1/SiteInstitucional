@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #A1A1A1;
 }
 
 :root {
@@ -19,7 +20,7 @@ a, button{
 
 /*HEADER ----------------------------------------------------------------*/
 .header {
-    background-color: var(--colorBlue);
+    background-color: #4B1761;
     height: 4.5rem;
 }
 
@@ -85,12 +86,13 @@ a, button{
 
 /*BNNER ---------------------------------------------------------------*/
 .banner {
-    background-image: url('https://uploads-ssl.webflow.com/60c3d2d198ecc411de7f67bf/61020ab9005241c0e17a36a2_consultoria-em-tecnologia-da-informacao-o-que-e-e-quando-contratar.png');
+    background-image: url('img/image 30.png');
     background-size: cover;
     /*imagem sempre ocupa toda a tela*/
     ;
     width: 100%;
     height: 35rem;
+    font-family: 'Poppins';
 }
 
 .banner .container {
@@ -103,19 +105,11 @@ a, button{
 
 .banner p {
     font-size: 7rem;
-    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     color: #ffffff;
+    margin-top: 200px;
 }
 
-.logo-empresa {
-    margin-top: 2rem;
-    width: 46REM;
-    height: 11.2rem;
-    background-image: url('./img/LOGO_AZUL_BRANCO.png');
-    background-size: cover;
-
-}
 
 /*CONTEUDO ----------------------------------------------------------------*/
 
@@ -184,7 +178,7 @@ a, button{
 .tltMissao {
     box-shadow: -1px 3px 11px -3px #606060;
     font-size: 2rem;
-    background-color: var(--colorBlue);
+    background-color: #4B1761;
     border-radius: 10px;
     width: 6rem;
     justify-content: center;
@@ -196,7 +190,7 @@ a, button{
 .tltValores {
     box-shadow: -1px 3px 11px -3px #606060;
     font-size: 2rem;
-    background-color: var(--colorBlue);
+    background-color: #4B1761;
     border-radius: 10px;
     width: 6rem;
     justify-content: center;
@@ -218,12 +212,66 @@ a, button{
     margin-right: auto;
 }
 
+/* Conheça a mercurio */
+.conhecaNois {
+    display: flex;
+    margin-top: 50px;
+}
+
+.container-pt3 {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10rem;
+    font-family: 'Poppins', sans-serif;
+} 
+
+.conheca {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.vector {
+   margin-top: 200px;
+   width: 60px;
+}
+
+.tltConheca {
+    font-size: 45px;
+    color: #4D4B4B;
+    margin-top: 50px;
+}
+
+.Imgline{
+    width: 100px;
+    height: 8px;
+    margin-left: 55%;
+    margin-bottom: 80%;
+}
+
+.texto-conheca {
+    color: #4D4B4B;
+    font-size: 22px;
+    margin-left: 20px;
+    margin-top: 70px;
+    margin-right: 40px;
+    text-align: justify;
+}
+
+/* Nosso time */
+
+.nossoTime {
+    height: 700px;
+}
+
 .container-pt2 {
     width: 60%;
     height: 100px;
     margin: auto;
     justify-content: space-between;
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
 
 .tltTime {
@@ -365,33 +413,55 @@ a, button{
    justify-content: center;
    flex-direction: column;
    display: flex;
+   font-family: 'Poppins';
 }
 
-#btnChat{
-    margin-top: 30rem;
-    width:13rem;
-    height: 3rem;
-    background-color: #0066ff;
-    border-radius: 10px;
+.botoesInteresse {
+    display: flex;
+    align-items: center;
+    color: #4B1761;
+}
+
+#btnChat {
+    margin-top: 1rem;
     border: none;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
+    font-size: 1rem;
+    color: #4B1761;
+    background-color: transparent;
+    margin-left: 1.2rem;
+}
+
+#btnCadastro {
+    margin-top: 1rem;
+    color: #4B1761;
+    border: none;
+    background-color: transparent;
     font-size: 1rem;
 }
+
+.interesse {
+    color: #4D4B4B;
+    font-size: 2rem;
+}
+
+/* Vector do final da page */
+
+/* .vectorFinal {
+    background-image: url('img/Vector 5.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 500px;
+} */
 
 
 
 
 /*FOOTER  ----------------------------------------------------------------*/
 .footer {
-    position: absolute;
     width: 100%;
     height: 9rem;
-    margin-top: 28rem;
-    background-color: var(--colorBlue);
-    margin-top: 10rem;
-
+    background-color: #4B1761;
+    margin-top: 7rem;
 }
 
 .logo-footer img{

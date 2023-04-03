@@ -16,8 +16,9 @@
             <div class="logo-header"><a href="../tela_home/home.html"><img src="./LOGO_COMPLETA.png" alt=""></a> </div>
             <ul class="navbar">
                 <li><a style="width: 110px;" href="../tela_home/home.html">Home</a></li>
-                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html" >QuemSomos</a></li>
+                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html">QuemSomos</a></li>
                 <li><a style="width: 180px;" href="">Simulador</a></li>
+                <li><a style="width: 180px; color: #DEC43B;" href="../tela_cadastro/cadastro.html">Cadastrar</a></li>
                 <li class="btn-login"><a style="width: 110px;" href="../tela_login/login.html">Login</a></li>
             </ul>
         </div>
@@ -28,26 +29,43 @@
 
     <section class="cadastro">
         <div class="formulario">
-            <h1> Cadastro</h1>
+            <h1>Cadastro</h1>
             <form action="">
+                <div class="containerForm">
 
 
-                <span>Nome da empresa</span> <br>
-                <input id="input_nomeEmpresa"> <br>
-                <span>CNPJ</span> <br>
-                <input id="input_cnpj"> <br>
-                <span>Porte</span> <br>
-                <select class="selecao" name="porte" id="input_porte">
-                    <option value="p">Pequena</option>
-                    <option value="m">Media</option>
-                    <option value="g">Grande</option>
-                </select> <br>
-                <span>Email</span> <br>
-                <input id="input_email"> <br>
-                <span>Senha</span> <br>
-                <input id="input_senha"> <br>
+                    <span class="nomeEmpresa">Nome da empresa</span> <br>
+                    <input id="input_nomeEmpresa"> <br>
 
-                <a href=""> <button>Cadastre-se</button></a>
+                    <span class="ladoTexto">
+                        <span>CNPJ</span>
+                        <span>Porte</span>
+                    </span>
+                    <span class="ladoAlado">
+                        <!-- input cnpj -->
+                        <input id="input_cnpj">
+                        <!-- input do porte da empresa -->
+                        <select class="selecao" name="porte" id="input_porte">
+                            <option value="...">...</option>
+                            <option value="p">Pequena</option>
+                            <option value="m">Media</option>
+                            <option value="g">Grande</option>
+                        </select>
+                    </span>
+
+                    <span class="ladoTexto">
+                        <span>Email</span>
+                        <span>Senha</span>
+                    </span>
+                    <span class="ladoAlado2">
+                        <!-- input email -->
+                        <input id="input_email" type="email">
+                        <!-- input senha -->
+                        <input id="input_senha" type="password">
+                    </span>
+
+                    <button><a href=""></a>Cadastre-se</button></a>
+                </div>
 
             </form>
         </div>
@@ -76,7 +94,8 @@
 
                     <ul>
                         <li><a href="../tela_home/home.html">Home</a></li>
-                        <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador Financeiro</a></li>
+                        <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador
+                                Financeiro</a></li>
                         <li><a href="../tela_cadastro/cadastro.html">Cadastre-se</a></li>
                     </ul>
                 </div>

@@ -4,9 +4,9 @@
 .chat  {
     background-color: rgb(255, 255, 255);
     width: 23rem;
-    height:29rem;
+    height: 29rem;
     border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     margin-top: -35rem;
     box-shadow: -1px 3px 11px -3px #000000a0;
 }
@@ -23,7 +23,7 @@
 }
 
 .header-chat{
-    background-color: #0066ff;
+    background-color: #4B1761;
     width: 100%;
     height: 3rem;
     border-radius: 10px 10px 0px 0px;
@@ -34,7 +34,7 @@
 
 .footer-chat{
     margin-top: 2.5rem;
-    background-color: #0066FF;
+    background-color: #4B1761;
     width: 100%;
     height: 3rem;
     border-radius: 0px 0px 10px 10px;
@@ -45,7 +45,7 @@
 }
 
 .pergunta{
-    background-color: #aeada890;
+    background-color: #DEC43B;
     width: 95%;
     height: 5rem;
     display: flex;
@@ -58,8 +58,7 @@
 }
 
 .pt1{
-    margin-top: 2.5rem;
-    
+    margin-top: 2.5rem; 
 }
 
 .pt2{
@@ -84,7 +83,7 @@
 .entrar-contato a{
     font-weight: 600;
     text-decoration: none;
-    color:  #ffdb29;
+    color:  #ffffff;
 }
 .container-footer span{
     margin-left: auto;
