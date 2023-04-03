@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #A1A1A1;
+    background-color: #D3D3D3;
 }
 
 :root {
@@ -428,7 +428,7 @@ a, button{
     font-size: 1rem;
     color: #4B1761;
     background-color: transparent;
-    margin-left: 1.2rem;
+    margin-left: 1.6rem;
 }
 
 #btnCadastro {
@@ -442,6 +442,10 @@ a, button{
 .interesse {
     color: #4D4B4B;
     font-size: 2rem;
+}
+
+.botoesInteresse i {
+    margin-right: 8px;
 }
 
 /* Vector do final da page */
