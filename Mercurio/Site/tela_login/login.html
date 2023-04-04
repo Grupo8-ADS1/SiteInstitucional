@@ -29,13 +29,12 @@
     <section class="login">
         <div class="formulario">
             <h1> Login</h1>
-            <form action="">
+            <form >
 
-                <input placeholder="eduardo@gmail.com" class="input email" type="text" id="input_email">
+                <input placeholder="eduardo@gmail.com" class="input email" type="text" id="inputLogin">
                 <i class="fa-solid fa-user icon" style="color: #4f4f4f;"></i><br>
 
-                <input placeholder="********" type="password" class="input senha " id="input_senha" min="8"
-                    maxlength="8">
+                <input placeholder="********" type="password" class="input senha " id="inputSenha">
                 <i class="fa-solid fa-lock icon" style="color: #4f4f4f;"></i> <br>
 
                 <div class="links-form">
@@ -45,9 +44,11 @@
                             Cadastre-se</a></span>
                 </div>
 
-                <a href=""> <button>Entrar</button></a>
+                
 
             </form>
+
+            <button id="teste" onclick="logar()">Entrar</button>
         </div>
     </section>
 
@@ -88,17 +89,58 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
+
+<script>
+    var preguiça = 12345678
+    var login
+    var senha
+    var loginJoao = "joao@mercurio.com"
+    var loginEvelyn = "evelyn@mercurio.com"
+    var loginGustavo = "gustavo@mercurio.com"
+    var loginFelipe = "felipe@mercurio.com"
+    var loginAmanda = "amanda@mercurio.com"
+    var loginLucio = "lucio@mercurio.com"
+    var senhaJoao = preguiça
+    var senhaEvelyn = preguiça
+    var senhaGustavo = preguiça
+    var senhaFelipe = preguiça
+    var senhaAmanda = preguiça
+    var senhaLucio = preguiça
+      
+
+    function logar() {
+        login = inputLogin.value;
+        senha = inputSenha.value;
+
+        var confirmaLogin = 
+    login == loginJoao ||
+    login == loginEvelyn ||
+    login == loginGustavo ||
+    login == loginFelipe ||
+    login == loginAmanda ||
+    login == loginLucio
+
+    var confirmaSenha = 
+    senha == senhaJoao ||
+    senha == senhaEvelyn ||
+    senha == senhaGustavo ||
+    senha == senhaFelipe ||
+    senha == senhaAmanda ||
+    senha == senhaLucio
+      
+        if (confirmaSenha && confirmaLogin){
+            alert(`Bem vindo! Você será redirecionado para o Dashboard`)
+            
+        } else{
+            alert(`Login ou senha incorretos`)
+        }
+        
+    }
+
+    function link(){
+        
+    }
+</script>
