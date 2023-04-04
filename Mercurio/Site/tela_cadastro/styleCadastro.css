@@ -134,7 +134,7 @@ button {
     width: 600px;
     height: 450px;
     display: flex;
-    margin-left: 25%;
+    margin-left: 30%;
     margin-top: 90px;
     padding: 10px 20px;
     border-radius: 8px;
@@ -163,8 +163,9 @@ form {
     font-size: 2rem;
     font-family: 'Poppins';
     font-weight: 600;
-    color: #0D1721;
-    margin-left: 32px;
+    color: #3b3b3b;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nomeEmpresa {
@@ -251,7 +252,7 @@ form {
     border: none;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .formulario a {

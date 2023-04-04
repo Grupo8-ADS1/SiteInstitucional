@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Mercúrio - Home</title>
     <link rel="stylesheet" href="./style_index.css">
+    <link rel="stylesheet" href="../tela_quem_somos/styleChat.css">
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -13,13 +15,13 @@
     <!--Navbar-->
     <div class="header">
         <div class="container">
-            <div class="logo-header"><img src="./assets/img/login/LOGO_COMPLETA.png" alt=""> </div>
+            <div class="logo-header"><img src="./assets/img/index/LOGO_COMPLETA.png" alt=""> </div>
             <ul class="navbar">
-                <li><a style="width: 110px;" href="">Home</a></li>
-                <li><a style="width: 180px;" href="">Quem Somos</a></li>
+                <li><a style="width: 110px;" href="../tela_home/index.html">Home</a></li>
+                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html">Quem Somos</a></li>
                 <li><a style="width: 180px;" href="">Simulador</a></li>
-                <li><a style="width: 180px; color: #DEC43B;" href="">Cadastre-se</a></li>
-                <li class="btn-login"><a style="width: 110px;" href="./login.html">Login</a></li>
+                <li><a style="width: 180px; color: #DEC43B;" href="../tela_cadastro/cadastro.html">Cadastre-se</a></li>
+                <li class="btn-login"><a style="width: 110px;" href="../tela_login/login.html">Login</a></li>
             </ul>
         </div>
     </div>
@@ -29,13 +31,18 @@
 
     <div class="banner">
         <div class="container">
-            
+
             <p class="frase">Inovando o mercado <br> varejista e atacadista! </p>
 
         </div>
     </div>
-</div>
+    </div>
+    
     <a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html"><button>Simule agora</button></a>
+
+    <div id="imagem-onda1">
+        <img class="onda1" src="./assets/img/index/onda1.png" alt="" srcset="">
+    </div>
 
     <!--Conteudo-->
 
@@ -48,11 +55,9 @@
 
 
             <div class="lucros">
-
-
                 <div class="tela-lucros">
-                    <img src="./assets/img/index/lucros.png" alt="">
-                    <p class="Plucros"></p>
+                    <img src="./assets/img/index/lucros-icon.png" alt="">
+                    <p class="Plucros">Lucros</p>
                 </div>
 
                 <span class="texto-lucros">Lorem ab Nisi recusandae
@@ -60,8 +65,8 @@
             </div>
 
             <div class="responsabilidade">
-                <div class="tela_responsabilidade">
-                    <img src="./assets/img/index/maos.png" alt="">
+                <div class="tela-responsabilidade">
+                    <img src="./assets/img/index/responsabilidade-icon.png" alt="">
                     <p class="Presponsabilidade">Responsabilidade</p>
                 </div>
 
@@ -72,8 +77,8 @@
             <div class="pesquisa">
 
                 <div class="tela-pesquisa">
-                    <img src="./assets/img/index/grafico.png" alt="">
-                    <p style="color: #4B1761" class="Ppesquisa" >Agilidade</p>
+                    <img src="./assets/img/index/analise-icon.png" alt="">
+                    <p style="color: #4B1761" class="Ppesquisa">Agilidade</p>
                 </div>
 
                 <span class="texto-pesquisa">Lorem ab Nisi recusandae
@@ -90,22 +95,79 @@
 
 
     <div class="fundo">
-        <img src="" alt="">
+        <img src="./assets/img/index/imagem_mercado.png" alt="">
 
-        <div class="texto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eos alias omnis tempora quidem explicabo quas
-            quis sequi a ab consectetur provident fugit illo culpa laboriosam aut, dolore iste illum? Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Sed officia quia expedita. Soluta corrupti porro sint iusto iste
-            voluptate numquam officiis, dolore nulla temporibus tempora accusamus repellendus unde deserunt cum?
+        <div id="texto-img">
+
+            <div class="div-texto-titulo">
+                <p>O que é IoT?</p>
+                <div class="div-linha"></div>
+            </div>
+
+            <div class="texto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eos alias omnis tempora quidem explicabo
+                quas
+                quis sequi a ab consectetur provident fugit illo culpa laboriosam aut, dolore iste illum? Lorem ipsum
+                dolor
+                sit amet consectetur adipisicing elit. Sed officia quia expedita. Soluta corrupti porro sint iusto iste
+                voluptate numquam officiis, dolore nulla temporibus tempora accusamus repellendus unde deserunt cum?
+            </div>
         </div>
 
 
     </div>
 
-    <div class="chat-div">
-        <button style="margin-left: auto; margin-right: auto; display: flex;margin-top: 3rem; " id="btnChat" onclick="teste()">Estou com dúvidas</button>
-        <div  id="div_chat"></div>
+    <!-- Depoimentos -->
+    <h1 class="depoimentos_tlt">Depoimentos dos nossos clientes</h1>
+
+    <div class="container-depoimento">
+        <div class="depoimento dep1">
+            <img class="perfil" src="./assets/img/index/perfil.png" alt="" srcset="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fuga eveniet consequuntur fugit
+                recusandae.</p>
+            <h4>Empresa</h4>
+        </div>
+        <div class="depoimento dep2">
+            <img class="perfil" src="./assets/img/index/perfil.png" alt="" srcset="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fuga eveniet consequuntur fugit
+                recusandae.</p>
+            <h4>Empresa</h4>
+        </div>
+        <div class="depoimento dep3">
+            <img class="perfil" src="./assets/img/index/perfil.png" alt="" srcset="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fuga eveniet consequuntur fugit
+                recusandae.</p>
+            <h4>Empresa</h4>
+        </div>
+
+
     </div>
+
+
+
+
+    <div id="imagem-onda2">
+        <img class="onda2" src="./assets/img/index/onda2.png" alt="" srcset="">
+    </div>
+
+    <div class="vectorFinal">
+        <div class="chat-div">
+            <h1 class="interesse">Se interessou? Venha fazer parte!</h1>
+            <div class="botoesInteresse">
+
+                <button id="btnCadastro"><a href="../tela_cadastro/cadastro.html"><i class="fa-solid fa-clipboard-list"
+                            style="color: #4B1761;"></i>Cadastro</a></button>
+
+                <button id="btnChat" onclick="chat()">
+                    <i class="fa-solid fa-square-phone"
+                        style="color: #4B1761;"></i>
+                Fale Conosco</button>
+            </div>
+            <div id="div_chat"></div>
+        </div>
+    </div>
+
+
 
     <!--Footer-->
 
@@ -113,7 +175,7 @@
         <div class="container-footer">
 
             <div class="empresa">
-                <div class="logo-footer"><img src="./assets/img/login/LOGO_COMPLETA.png" alt="" srcset=""></div>
+                <div class="logo-footer"><img src="./assets/img/index/LOGO_COMPLETA.png" alt="" srcset=""></div>
 
                 <div class="redes">
                     <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
@@ -131,7 +193,7 @@
                     <ul>
                         <li><a href="">Home</a></li>
                         <li><a href="">Simulador</a></li>
-                        <li><a style="color:#DEC43B"; href="">Cadastre-se</a></li>
+                        <li><a style="color:#DEC43B" ; href="">Cadastre-se</a></li>
                     </ul>
                 </div>
 
@@ -150,7 +212,7 @@
 
 <script>
 
-    function teste() {
+    function chat() {
         div_chat.innerHTML = `
         <div class="chat">
         <div class="container-chat" ">

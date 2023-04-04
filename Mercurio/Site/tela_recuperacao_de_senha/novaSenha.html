@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercúrio - Confirme sua nova senha</title>
+
     <link rel="stylesheet" href="styleSenha.css">
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
 </head>
@@ -13,12 +14,12 @@
 <body>
     <div class="header">
         <div class="container">
-            <div class="logo-header"><a href="../tela_home/home.html"><img src="./LOGO_COMPLETA.png" alt=""></a> </div>
+            <div class="logo-header"><img src="./LOGO_COMPLETA copy.png" alt=""> </div>
             <ul class="navbar">
-                <li><a style="width: 110px;" href="../tela_home/home.html">Home</a></li>
-                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html">QuemSomos</a></li>
+                <li><a style="width: 110px;" href="../tela_home/index.html">Home</a></li>
+                <li><a style="width: 180px;" href="../tela_quem_somos/quemSomos.html">Quem Somos</a></li>
                 <li><a style="width: 180px;" href="">Simulador</a></li>
-                <li class="cadastrar"><a style="width: 180px;" href="">Cadastrar</a></li>
+                <li><a style="width: 180px; color: #DEC43B;" href="../tela_cadastro/cadastro.html">Cadastre-se</a></li>
                 <li class="btn-login"><a style="width: 110px;" href="../tela_login/login.html">Login</a></li>
             </ul>
         </div>
@@ -26,18 +27,19 @@
 
 <!-- Mudei algumas coisas como adicionar o container, tirei a tag form e tirei tmb a outra div que estava aqui -->
     <div class="container">
-        <div class="formulario">
+        <div class="formulario" id="form-novaSenha">
             <h1> Confirme sua nova senha</h1>
 
             <span>Para voltar a acessar sua conta, cadastre uma nova senha.</span><br><br>
 
-            <input placeholder="Email/CNPJ" class="input" type="text" id="input_email">
-            <i class="fa-solid fa-user icon" style="color: #4f4f4f;"></i><br>
+            <input placeholder="Nova senha" class="input senha" type="text" id="input_senha">
+            <i class="fa-solid fa-lock icon" style="color: #4f4f4f;"></i><br>
 
-            <input placeholder="Confirme seu Email/CNPJ" class="input" type="text" id="input_confirmar_email">
-            <i class="fa-solid fa-user icon" style="color: #4f4f4f;"></i><br>
-<!-- coloquei a tag a dentro do botão -->
-            <button><a href="">Enviar</button></a>
+            <input placeholder="Confirme sua senha" class="input confSenha" type="text" id="input_confirmar_senha">
+            <i class="fa-solid fa-lock icon confSenha-icon" style="color: #4f4f4f;"></i><br>
+            
+            <!-- coloquei a tag a dentro do botão -->
+            <button class="btn_enviar"><a href="">Enviar</button></a>
         </div>
     </div>
 
@@ -47,7 +49,7 @@
         <div class="container-footer">
 
             <div class="empresa">
-                <div class="logo-footer"><img src="./LOGO_COMPLETA.png"></div>
+                <div class="logo-footer"><img src="./LOGO_COMPLETA copy.png"></div>
 
                 <div class="redes">
                     <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
@@ -66,7 +68,7 @@
                         <li><a href="../tela_home/home.html">Home</a></li>
                         <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador
                                 Financeiro</a></li>
-                        <li><a href="../tela_cadastro/cadastro.html">Cadastre-se</a></li>
+                                <li><a style="color:#DEC43B"href="">Cadastre-se</a></li>
                     </ul>
                 </div>
 
