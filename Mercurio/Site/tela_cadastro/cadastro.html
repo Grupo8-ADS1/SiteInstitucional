@@ -66,10 +66,11 @@
                         <input id="input_senha" type="password">
                     </span>
 
-                    <button onclick="cadastro()"> Cadastre-se</button>
+
                 </div>
 
             </form>
+            <button onclick="cadastrar()"> Cadastre-se</button>
         </div>
     </section>
 
@@ -98,7 +99,7 @@
                         <li><a href="../tela_home/home.html">Home</a></li>
                         <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador
                                 Financeiro</a></li>
-                                <li><a style="color:#DEC43B" ; href="">Cadastre-se</a></li>
+                        <li><a style="color:#DEC43B" ; href="">Cadastre-se</a></li>
                     </ul>
                 </div>
 
@@ -118,3 +119,27 @@
 </body>
 
 </html>
+
+<script>
+    var login;
+    var senha;
+    var nomeEmpresa;
+    var indice_empresa;
+
+    function cadastrar() {
+        var login = input_email.value
+        var senha = input_senha.value
+        var nomeEmpresa = input_nomeEmpresa.value
+        nomeEmpresa = nomeEmpresa.toLowerCase()
+        var indice_empresa = login.indexOf(nomeEmpresa)
+
+        if (senha.length < 8) {
+            alert(`Sua senha deve conter pelo menos 8 caracteres`)
+        }
+        if (login.endsWith(".com") && indice_empresa >= 0 && senha.length >= 8 && login.indexOf("@") >= 0) {
+            alert(`Cadastrado com Sucesso`)
+        } else {
+            alert(`Falha ao cadastrar`)
+        }
+    }
+</script>
