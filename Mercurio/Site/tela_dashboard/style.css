@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #E3E3E3;
+    background-color: #e3e3e3c8;
 }
 
 :root {
@@ -106,7 +106,7 @@ a, button{
     height: 40%;
     width: 90%;
     border-radius: 10px;
-    box-shadow: -1px 3px 11px -3px #000000;
+    box-shadow: -1px 3px 11px -3px #00000058;
 }
 
 .quadro1 h2{
@@ -124,7 +124,7 @@ a, button{
     height: 40%;
     width: 90%;
     border-radius: 10px;
-    box-shadow: -1px 3px 11px -3px #000000;
+    box-shadow: -1px 3px 11px -3px #00000058;
 }
 
 .quadro2 h2{
@@ -153,7 +153,7 @@ a, button{
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 10px;
-    box-shadow: -1px 3px 11px -3px #000000;
+    box-shadow: -1px 3px 11px -3px #00000058;
 }
 
 .grafico1 h2{
@@ -216,7 +216,7 @@ a, button{
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 10px;
-    box-shadow: -1px 3px 11px -3px #000000;
+    box-shadow: -1px 3px 11px -3px #00000058;
 }
 
 .grafico2 h2{
@@ -240,7 +240,7 @@ a, button{
     width: 30%;
     align-items: center;
     border-radius: 10px;
-    box-shadow: -1px 3px 11px -3px #000000;
+    box-shadow: -1px 3px 11px -3px #00000058;
 }
 
 .ranking h3{
