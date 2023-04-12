@@ -211,28 +211,28 @@
 </html>
 
 <script>
-
     function chat() {
         div_chat.innerHTML = `
+
         <div class="chat">
-        <div class="container-chat" ">
+        <div class="container-chat">
             <div class="header-chat">
                 <div class="container-header">
                     <span class="titulo">Chat</span>
                 </div>
             </div>
             <div class="perguntas">
-                <div class="pergunta pt1">
-                    <a href=""><p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p></a>
-                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                <div class="pergunta pt1" id="txt_Dash">
+                    <a onclick="resposta()"><p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
                 <div class="pergunta pt2">
-                    <a href=""><p class="textoPergunta txtP2">Esqueci minha senha</p></a>
-                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                    <a href="../tela_recuperacao_de_senha/senha.html"><p class="textoPergunta txtP2">Esqueci minha senha</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
                 <div class="pergunta pt3">
-                    <a href=""><p class="textoPergunta txtP3">Não consigo fazer meu cadastro</p></a>
-                    <i class="fa-solid fa-chevron-right" style="color: #0066ff; font-size: 1.5rem;"></i>
+                    <a href="../tela_cadastro/cadastro.html"><p class="textoPergunta txtP3">Não consigo fazer meu cadastro</p></a>
+                    <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
                 
             </div>
@@ -246,6 +246,10 @@
     
     
     `;
+    }
+
+    function resposta(){
+        txt_Dash.innerHTML = `<p style="padding: 10px; text-align: center; color: #3b3b3b">Para acessar o Dashboard você terá que fazer o <b><a href="../tela_login/login.html">login<i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1rem;"></i></a></b>`;
     }
 
 </script>
