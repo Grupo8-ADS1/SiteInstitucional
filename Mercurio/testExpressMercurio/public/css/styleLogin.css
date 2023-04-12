@@ -161,16 +161,14 @@ a, button{
         width: 150px;
         height: 40px;
         display: flex;
-        justify-content: center;
-        margin-left: 0%;
         margin-top: 10px;
         border-radius: 10px;
-        display: flex;
         justify-content: center;
         align-items: center;
         border: none;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
+        margin-left: 35%;
         
     }
 

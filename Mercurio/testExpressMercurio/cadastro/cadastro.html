@@ -19,7 +19,7 @@
             <ul class="navbar">
                 <li><a style="width: 110px;" href="/home">Home</a></li>
                 <li><a style="width: 180px;" href="/quemSomos">Quem Somos</a></li>
-                <li><a style="width: 180px;" href="/simulador">Simulador</a></li>
+                <li><a style="width: 180px;" href="">Simulador</a></li>
                 <li><a style="width: 180px; color: #DEC43B;" href="/cadastro">Cadastre-se</a></li>
                 <li class="btn-login"><a style="width: 110px;" href="/login">Login</a></li>
             </ul>
@@ -69,7 +69,7 @@
 
 
                 </div>
-                <button type="submit" onclick=""> Cadastre-se</button>
+                <button type="submit" onclick="">Continuar</button>
             </form>
             
         </div>
@@ -98,8 +98,7 @@
 
                     <ul>
                         <li><a href="/home">Home</a></li>
-                        <li><a href="/simulador">Simulador
-                                Financeiro</a></li>
+                        <li><a href="">Simulador</a></li>
                         <li><a style="color:#DEC43B" ; href="/cadastro">Cadastre-se</a></li>
                     </ul>
                 </div>
@@ -139,7 +138,7 @@
         }
         if (login.endsWith(".com") && indice_empresa >= 0 && senha.length >= 8 && login.indexOf("@") >= 0) {
             alert(`Cadastrado com Sucesso`)
-            window.location('/login')
+            window.location('/cadastroFuncionario')
         } else {
             alert(`Falha ao cadastrar`)
         }

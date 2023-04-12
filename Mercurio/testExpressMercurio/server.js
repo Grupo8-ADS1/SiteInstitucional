@@ -32,12 +32,14 @@ var senhaAmanda = 'Amanda12345678';
 var senhaLucio = 'Lucio12345678';
 
 app.post('/add', (req, res) => {
+
     if ((req.body.login == loginJoao ||
         req.body.login == loginEvelyn ||
         req.body.login == loginGustavo ||
         req.body.login == loginFelipe ||
         req.body.login == loginAmanda ||
-        req.body.login == loginLucio) && 
+        req.body.login == loginLucio) 
+        && 
         (req.body.senha == senhaAmanda ||  
         req.body.senha == senhaJoao ||
         req.body.senha == senhaEvelyn ||
@@ -59,7 +61,6 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/home/index.html')
 });
 
-
 app.get('/quemSomos', (req, res) => {
     res.sendFile(__dirname +'/quemSomos/quemSomos.html');
 });
@@ -73,17 +74,31 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/dashBoard', (req, res) => {
-    res.sendFile( __dirname + `/dashBoard/dashboard.html`)
+    res.sendFile( __dirname + `/dashBoard/dashboard.html`);
 });
 
 app.get('/recuperarSenha', (req, res) => {
-    res.send(`Aqui vai a recuperar senha`)
+    res.sendFile( __dirname + `/recuperacaoSenha/userRecuperarSenha.html`);
 });
 
+app.get('/NovaSenha', (req, res) => {
+    res.sendFile( __dirname + `/novaSenha/novaSenha.html`);
+});
 
+app.get('/simulador', (req, res) => {
+    res.sendFile( __dirname + `/simulador/simulador.html`);
+});
+
+app.get('/cadastroFuncionario', (req, res) => {
+    res.sendFile( __dirname + `/cadastroFuncionario/cadFuncionario.html`);
+});
+
+app.get('/cadastroFuncionarioInstitucional', (req, res) => {
+    res.sendFile( __dirname + `/cadastroFuncionarioInstitucional/cadFuncionarioInstitucional.html`);
+});
 
 
 
 app.listen(3333, () => {
-    console.log(`Server rodando em localHost:3333`)
+    console.log(`Server rodando em localHost:3333`);
 });

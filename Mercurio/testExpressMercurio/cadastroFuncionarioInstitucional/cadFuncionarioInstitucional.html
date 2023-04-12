@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercúrio - Entrar</title>
-    <link rel="stylesheet" href="/css/styleLogin.css">
+    <title>Mercúrio - Confirme sua nova senha</title>
+    <link rel="stylesheet" href="/css/styleCadastroFuncionarioInst.css">
+
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,33 +25,41 @@
         </div>
     </div>
 
-
-
-    <section class="login">
+    <div class="container">
         <div class="formulario">
-            <h1> Login</h1>
-            <form action="/add" method="post" >
+            <h1> Cadastre um novo colaborador</h1>
 
-                <input placeholder="eduardo@gmail.com" class="input email" name="login" type="text" id="inputLogin">
-                <i class="fa-solid fa-user icon" style="color: #4f4f4f;"></i><br>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing</span><br><br><br>
 
-                <input placeholder="********" type="password" name="senha" class="input senha " id="inputSenha">
-                <i class="fa-solid fa-lock icon" style="color: #4f4f4f;"></i> <br>
 
-                <div class="links-form">
-                    <a href="/recuperarSenha" style="color:#4B1761;">Esqueceu a senha?</a> <br>
+            <p>Nome completo:</p>
+            <input placeholder="" class="input-campo-um" type="text">
+            <br>
+            <p>Data de nascimento:</p>
+            <input placeholder="" class="input-campo-dois" type="text">
+            <br>
+            <p>Cpf:</p>
+            <input placeholder="" class="input-campo-tres" type="text">
+            <br>
+            <p>Email:</p>
+            <input placeholder="" class="input-campo-quatro" type="text">
+            <br>
+            <p>Senha:</p>
+            <input placeholder="" class="input-campo-cinco" type="text">
+            <br>
 
-                    <span> Não é cadastrado? <a href="/cadastro" style="color:#4B1761;">
-                            Cadastre-se</a></span>
-                </div>
+            <p>Função:</p>
+            <select class="selecao" id="input_funcao">
+                <option value="...">...</option>
+                <option value="a">Administrador</option>
+                <option value="c">Colaborador</option>
+            </select>
 
-                <button id="teste" type="submit" onclick="">Entrar</button>
 
-            </form>
-
-            
+            <button>Cadastrar</button>
         </div>
-    </section>
+    </div>
+
 
 
     <div class="footer">
@@ -88,59 +97,17 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
-
-<script>
-    var preguiça = 12345678
-    var login
-    var senha
-    var loginJoao = "joao@mercurio.com"
-    var loginEvelyn = "evelyn@mercurio.com"
-    var loginGustavo = "gustavo@mercurio.com"
-    var loginFelipe = "felipe@mercurio.com"
-    var loginAmanda = "amanda@mercurio.com"
-    var loginLucio = "lucio@mercurio.com"
-    var senhaJoao = preguiça
-    var senhaEvelyn = preguiça
-    var senhaGustavo = preguiça
-    var senhaFelipe = preguiça
-    var senhaAmanda = preguiça
-    var senhaLucio = preguiça
-      
-
-    function logar() {
-        login = inputLogin.value;
-        senha = inputSenha.value;
-
-        var confirmaLogin = 
-    login == loginJoao ||
-    login == loginEvelyn ||
-    login == loginGustavo ||
-    login == loginFelipe ||
-    login == loginAmanda ||
-    login == loginLucio
-
-    var confirmaSenha = 
-    senha == senhaJoao ||
-    senha == senhaEvelyn ||
-    senha == senhaGustavo ||
-    senha == senhaFelipe ||
-    senha == senhaAmanda ||
-    senha == senhaLucio
-      
-        if (confirmaSenha && confirmaLogin){
-            alert(`Bem vindo! Você será redirecionado para o Dashboard`)
-            window.location('/dashBoard')
-            
-        } else{
-            alert(`Login ou senha incorretos`)
-        }
-        
-    }
-
-    function link(){
-        
-    }
-</script>

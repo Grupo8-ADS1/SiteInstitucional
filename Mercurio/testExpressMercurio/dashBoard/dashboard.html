@@ -7,9 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercúrio - Dashboard</title>
 
-    <link rel="stylesheet" href="/css/dashstyle.css">
-    <link rel="stylesheet" href="styleChat.css">
+    <!-- css dashboard -->
+    <link rel="stylesheet" href="/css/styleDashboard.css">
+    <link rel="stylesheet" href="/css/styleGraficos.css">
+
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
+
+    <!-- links dashboard -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+
 </head>
 
 <body>
@@ -18,20 +26,24 @@
         <div class="container">
             <div class="logo-header"><img src="/css/img/LOGO_COMPLETA.png" alt=""> </div>
             <ul class="navbar">
-                <li class="img-conf"><i class="fa-solid fa-gear fa-lg"></i></li>
+                <a href="/cadastroFuncionario"><li class="img-conf"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i></li></a>
                 <!-- Tirei o link, pois não sei para onde linkar -->
                 <li class="btn-login"><a style="width: 110px;" href=""><i
                             class="fa-solid fa-circle-user fa-lg"></i>Usuário</a></li>
             </ul>
         </div>
     </div>
+
     <!-- As divs do primeiro grafico -->
     <div class="container-dashboard">
         <div class="dashboard1">
             <div class="fluxos">
                 <div class="quadro1">
                     <!-- colquei um h2 só para mostrar, assumi que ira ser trocado -->
-                    <h2>Fluxo</h2>
+                    <section>
+                        <canvas class="grafico_fluxo" id="fluxo"></canvas>
+                    </section>
+
                 </div>
                 <div class="quadro2">
                     <h2>2040</h2>
@@ -40,32 +52,49 @@
             </div>
             <div class="grafico1">
                 <!-- colquei um h2 só para mostrar, assumi que ira ser trocado -->
-                <h2>grafico</h2>
+                <section>
+                    <canvas class="grafico_setores" id="setores"></canvas>
+                </section>
             </div>
         </div>
     </div>
 
-    <!-- As divs do segundo grafico -->
-    <div class="container-dashboard">
+     <!-- As divs do segundo grafico -->
+     <div class="container-dashboard">
         <div class="dashboard2">
             <div class="botoes">
-                <button class="setor">Setor</button>
-                <button class="data">Data</button>
-                <button class="hora">Hora</button>
-                <button class="grafico">Gráfico</button>
+                <select class="setor">
+                    <option selected disabled>Setor</option>
+                    <option value="line">Açougue</option>
+                    <option value="bar">Bebidas</option>
+                    <option value="bar">Hortifruti</option>
+                    <option value="bar">Padaria</option>
+                    <option value="bar">Peixaria</option>
+                </select>
+                
+
+                <span class="texto">Período 1</span>
+                <input type="date" class="data" value="now">
+                <input type="time" class="hora">
+
+                <span class="texto">Período 2</span>
+                <input type="date" class="data" value="now">
+                <input type="time" class="hora">
+
+                <select class="grafico">
+                    <option selected disabled>Tipo Gráfico</option>
+                    <option value="line">Linha</option>
+                    <option value="bar">Barra</option>
+
+                </select>
                 <button class="filtrar">Filtrar</button>
             </div>
             <div class="grafico2">
-                <!-- colquei um h2 só para mostrar, assumi que ira ser trocado -->
-                <h2>grafico</h2>
+                <section>
+                    <canvas class="grafico_filtros" id="filtros"></canvas>
+                </section>
             </div>
-            <div class="ranking">
-                <h3>Top 3</h3>
-                <h4>setores</h4>
-                <span><span class="numeracao">1. </span>Hortifruti</span>
-                <span><span class="numeracao">2. </span>Padaria</span>
-                <span><span class="numeracao">3. </span>Açougue</span>
-            </div>
+
         </div>
     </div>
 
@@ -76,33 +105,7 @@
             <div class="empresa">
                 <div class="logo-footer"><img src="/css/img/LOGO_COMPLETA.png" alt="" srcset=""></div>
 
-                <div class="redes">
-                    <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
-                </div>
-            </div>
 
-            <hr>
-
-            <div class="paginas-footer">
-                <div class="paginas">
-
-                    <ul>
-                        <li><a href="../tela_home/home.html">Home</a></li>
-                        <li><a href="../tela_calculadora_financeira/calculadora_financeira_antiga.html">Simulador
-                                Financeiro</a></li>
-                        <li><a href="">Cadastre-se</a></li>
-                    </ul>
-                </div>
-
-                <div class="informacoes">
-                    <ul>
-                        <li><a href="../tela_quem_somos/quemSomos.html">Quem Somos</a></li>
-                        <li><a href="">Fale conosco</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -111,3 +114,237 @@
 </body>
 
 </html>
+
+<script>
+
+    // GRAFICO DO TOTAL DE SETORES
+    var graficoSetores = document.getElementById('setores').getContext('2d');
+    graficoSetores.canvas.width = 800;
+    graficoSetores.canvas.height = 400;
+
+    var GSetor = new Chart(
+        graficoSetores,
+        {
+            type: 'line',
+            data: {
+
+                // labels: ['Padaria', 'Hortifruti', 'Peixaria'],
+
+                datasets: [{ // json e vetor
+
+                    // linha 1
+                    label: 'Padaria',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1,
+                    borderColor: [
+                        'rgb(244,164,96)',
+                    ],
+                    backgroundColor: [
+                        'transparent',
+                    ],
+                },
+
+                // linha 2
+                {
+
+                    label: 'Hortifruti',
+                    data: [12 + 10, 19 + 10, 3 + 10, 5 + 10, 2 + 10, 3 + 10],
+                    borderWidth: 1,
+                    borderColor: [
+                        'rgb(152,251,152)',
+                    ],
+                    backgroundColor: [
+                        'transparent',
+                    ],
+                },
+
+                // linha 3
+                {
+                    label: 'Peixaria',
+                    data: [4, 9, 2, 1, 12, 20],
+                    borderWidth: 1,
+                    borderColor: [
+                        'rgb(135,206,250)',
+                    ],
+                    backgroundColor: [
+                        'transparent',
+                    ],
+                }]
+            },
+
+
+
+            options: {
+                scales: {
+                    xAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                animation: {
+                    duration: 0
+                }
+            }
+        }
+    );
+
+    // GRAFICO DO FLUXO TOTAL
+    var graficoFluxo = document.getElementById('fluxo').getContext('2d');
+    graficoFluxo.canvas.width = 1000;
+    graficoFluxo.canvas.height = 600;
+
+    var GSetor = new Chart(
+        graficoFluxo,
+        {
+            type: 'doughnut',
+            data: { // json dos dados
+                labels: [
+                    'Fluxo total da loja',
+                ],
+
+                datasets: [{
+                    label: 'fluxo',
+                    data: [65, 35],
+                    backgroundColor: [
+                        'rgb(148,0,211)',
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                animation: {
+                    duration: 0
+                }
+            }
+        }
+    );
+
+    // GRAFICO DOS FILTROS
+    var grafico_filtros = document.getElementById('filtros').getContext('2d');
+    grafico_filtros.canvas.width = 940;
+    grafico_filtros.canvas.height = 400;
+
+    var GSetor = new Chart(
+        grafico_filtros,
+        {
+            type: 'line',
+            data: {
+
+
+                datasets: [{ // json e vetor
+
+                    // linha 1
+                    label: 'Padaria',
+                    data: [1, 5, 3, 10, 5, 20],
+                    borderWidth: 1,
+                    borderColor: [
+                        'rgb(244,164,96)',
+                    ],
+                    backgroundColor: [
+                        'rgb(244,164,96)',
+                    ],
+                },
+
+                { // json e vetor
+
+                    // linha 1
+                    label: 'Hortifruti',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1,
+                    borderColor: [
+                    'rgb(152,251,152)',
+                    ],
+                    backgroundColor: [
+                    'rgb(152,251,152)',
+                    ],
+                },
+
+                { // json e vetor
+
+                    // linha 1
+                    label: 'Peixaria',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1,
+                    borderColor: [
+                    'rgb(135,206,250)',
+                    ],
+                    backgroundColor: [
+                    'rgb(135,206,250)',
+                    ],
+                },
+
+                ]
+            },
+
+
+
+            options: {
+                scales: {
+                    xAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                animation: {
+                    duration: 0
+                }
+            }
+        }
+
+    );
+
+    var paginacao = {};
+    var tempo = {};
+    function obterDados(grafico, endpoint) {
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
+        http.send(null);
+        var valores = JSON.parse(http.responseText);
+        if (paginacao[endpoint] == null) {
+            paginacao[endpoint] = 0;
+        }
+        if (tempo[endpoint] == null) {
+            tempo[endpoint] = 0;
+        }
+        // Exibir à partir do último elemento exibido anteriormente
+        var ultimaPaginacao = paginacao[endpoint];
+        paginacao[endpoint] = valores.length;
+        var valores = valores.slice(ultimaPaginacao);
+        valores.forEach((valor) => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
+                grafico.data.labels.shift();
+                grafico.data.datasets[0].data.shift();
+            }
+
+            grafico.data.labels.push(tempo[endpoint]++);
+            grafico.data.datasets[0].data.push(parseFloat(valor));
+            grafico.update();
+        })
+    }
+
+    setInterval(() => {
+        obterDados(chave, 'chave');
+    }, 1000);
+
+</script>
