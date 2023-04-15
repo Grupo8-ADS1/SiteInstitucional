@@ -50,3 +50,5 @@ CREATE TABLE captacao
     CONSTRAINT FOREIGN KEY(fkSensor) REFERENCES sensor(idSensor)
 );
 
+truncate usuario;
+

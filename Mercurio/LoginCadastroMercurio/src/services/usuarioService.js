@@ -28,10 +28,10 @@ module.exports = {
             });
         });
     },
-    inserir: (emailUsuario, senhaUsuario) => {
+    inserir: (nomeUsuario,senhaUsuario,emailUsuario,nivelUsuario,cpfUsuario,dtNascUsuario) => {
         return new Promise((aceito, rejeitado) => {
 
-            db.query('INSERT INTO usuario (emailUsuario, senhaUsuario) values (?, ?)', [emailUsuario, senhaUsuario], (error, results) => {
+            db.query('INSERT INTO usuario (nomeUsuario, senhaUsuario,emailUsuario,nivelUsuario,cpfUsuario,dtNascUsuario) values (?, ? , ? , ? , ? ,?)', [nomeUsuario, senhaUsuario,emailUsuario,nivelUsuario,cpfUsuario,dtNascUsuario], (error, results) => {
                 if (error) {
                     rejeitado(error);
                     return;

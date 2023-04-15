@@ -14,7 +14,10 @@ module.exports = {
                 idUsuario: usuarios[i].idUsuario,
                 nomeUsuario: usuarios[i].nomeUsuario,
                 emailUsuario: usuarios[i].emailUsuario,
-                senhaUsuario: usuarios[i].senhaUsuario
+                senhaUsuario: usuarios[i].senhaUsuario,
+                nivelUsuario: usuarios[i].nivelUsuario,
+                cpfUsuario: usuarios[i].cpfUsuario,
+                dtNascUsuario: usuarios[i].dtNascUsuario
             });
         }
         res.json(json);
@@ -40,16 +43,26 @@ module.exports = {
             result: {}
         };
 
-        let emailUsuario = req.body.emailUsuario;
+
+
+        let nomeUsuario = req.body.nomeUsuario;
         let senhaUsuario = req.body.senhaUsuario;
+        let emailUsuario = req.body.emailUsuario;
+        let nivelUsuario = req.body.nivelUsuario;
+        let cpfUsuario = req.body.cpfUsuario;
+        let  dtNascUsuario = req.body.dtNascUsuario;
         
 
         if (emailUsuario && senhaUsuario) {
-            let usuarioId = await usuarioService.inserir(emailUsuario, senhaUsuario);
+            let usuarioId = await usuarioService.inserir(nomeUsuario, senhaUsuario, emailUsuario, nivelUsuario, cpfUsuario, dtNascUsuario );
             json.result = {
                 idUsuario: usuarioId,
+                nomeUsuario,
+                senhaUsuario,
                 emailUsuario,
-                senhaUsuario
+                nivelUsuario,
+                cpfUsuario,
+                dtNascUsuario
             };
         } else {
             json.error = 'Campos não enviados'
