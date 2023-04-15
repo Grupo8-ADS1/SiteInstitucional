@@ -30,6 +30,11 @@ CREATE TABLE usuario
     CONSTRAINT FOREIGN KEY(fkEmpresa) REFERENCES empresa(idEmpresa)
 );
 
+insert into usuario (nomeUsuario, senhaUsuario, emailUsuario) values
+('João Vitor Cordeiro','Joao@2003','joao@mercurio.com');
+
+select * from usuario;
+
 CREATE TABLE sensor
 (
 	idSensor INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,4 +49,6 @@ CREATE TABLE captacao
     fkSensor INT,
     CONSTRAINT FOREIGN KEY(fkSensor) REFERENCES sensor(idSensor)
 );
+
+truncate usuario;
 
