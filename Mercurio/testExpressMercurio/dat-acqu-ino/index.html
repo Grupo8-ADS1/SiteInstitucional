@@ -8,8 +8,8 @@
     <title>Mercúrio - Dashboard</title>
 
     <!-- css dashboard -->
-    <link rel="stylesheet" href="/css/styleDashboard.css">
-    <link rel="stylesheet" href="/css/styleGraficos.css">
+    <link rel="stylesheet" href="\css\styleDashboard.css">
+    <link rel="stylesheet" href="">
 
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
 
@@ -20,21 +20,401 @@
 
 </head>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,800&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #202020;
+    }
+
+    :root {
+        --colorAll: #3b3b3b;
+        --colorBlue: #0066ff;
+        --colorYellow: #DEC43B;
+    }
+
+    a,
+    button {
+        cursor: pointer;
+    }
+
+
+
+    /*HEADER ----------------------------------------------------------------*/
+    .header {
+        background: rgb(83, 5, 98);
+        background: linear-gradient(90deg, rgba(83, 5, 98, 1) 0%, rgba(80, 13, 142, 1) 28%, rgba(77, 6, 140, 1) 53%, rgba(0, 0, 0, 0.9859593495601365) 100%);
+        height: 4.5rem;
+        box-shadow: -1px 3px 11px -5px rgba(0, 0, 0, 0.747);
+    }
+
+
+
+    .container {
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+
+    .header .container {
+        justify-content: space-between;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        text-align: start;
+    }
+
+    .titulo {
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
+
+    .navbar li,
+    .navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+    }
+
+    .logo-header img {
+        margin-top: 0.5rem;
+        width: 10rem;
+        height: 3rem;
+    }
+
+    .img-conf {
+        margin-right: 10px;
+    }
+
+    .btn-login a {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    }
+
+
+    /*CORPO DA PÁGINA ----------------------------------------------------------------*/
+
+    /* Primeiro Gráfico */
+
+    .container-dashboard {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .dashboard1 {
+        display: flex;
+        height: 500px;
+        width: 90%;
+        margin-top: -6rem;
+    }
+
+    .fluxos {
+        display: flex;
+        height: 80%;
+        width: 60%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: -1.8rem;
+    }
+
+    .quadro1 {
+        font-family: 'Poppins', sans-serif;
+        background-color: #2d2d2d;
+        border: #404040 2px solid;
+        box-shadow: -1px 3px 11px -3px #39393982;
+        height: 40%;
+        width: 20rem;
+        border-radius: 10px;
+
+    }
+
+    .quadro1 h2 {
+        color: #4B1761;
+        font-size: 55px;
+        font-weight: bold;
+        justify-content: center;
+        margin-bottom: 0;
+        margin-left: 22%;
+    }
+
+    .quadro2 {
+        font-family: 'Poppins', sans-serif;
+        height: 40%;
+        width: 20rem;
+        margin-left: -5rem;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #2d2d2d;
+        border: #404040 2px solid;
+        box-shadow: -1px 3px 11px -3px #39393982;
+        border-radius: 10px;
+    }
+
+    .quadro2 h2 {
+        margin-top: 20px;
+        color: #DEC43B;
+        font-size: 50px;
+        font-weight: bold;
+        justify-content: center;
+        margin-bottom: 0;
+        margin-left: 30%;
+    }
+
+    .quadro2 h5 {
+        color: #ffffff;
+        font-size: 15px;
+        justify-content: center;
+        margin-top: 0px;
+        margin-left: 27%;
+    }
+
+    .grafico1 {
+
+        display: flex;
+        background-color: #2d2d2d;
+        border: #404040 2px solid;
+        box-shadow: -1px 3px 11px -3px #39393982;
+        height: 88%;
+        width: 50%;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        border-radius: 10px;
+    }
+
+    .grafico1 h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #4B1761;
+        font-size: 50px;
+        font-weight: bold;
+        justify-content: center;
+        margin-bottom: 0;
+        margin-left: 38%;
+        margin-top: 22%;
+    }
+
+    /* linha 1 dos graficos*/
+    .linha1 {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    /* Segundo Gráfico */
+
+    .dashboard2 {
+        display: flex;
+        height: 10rem;
+        width: 42.5rem;
+        background-color: #2d2d2d;
+        border: #404040 2px solid;
+        box-shadow: -1px 3px 11px -3px #39393982;
+        margin-right: -14rem;
+        border-radius: 10px;
+        margin-top: 7.4rem;
+    }
+
+    .botoes {
+        height: 100%;
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .campos-filtros {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .botoes-filtros {
+        display: flex;
+        margin-left: 10rem;
+
+    }
+
+    .setor,
+    .grafico,
+    .mes {
+        font-family: 'Poppins', sans-serif;
+        width: 10rem;
+        height: 35px;
+        border-radius: 8px;
+        color: #202020;
+        font-weight: 600;
+        border: none;
+        background-color: #ffffff;
+        margin: 10px;
+    }
+
+    /* .mes{
+    margin-top: 5px;
+    margin-bottom: 5px;
+} */
+
+    .filtrar,
+    .media {
+        font-family: 'Poppins', sans-serif;
+        width: 10rem;
+        height: 35px;
+        border-radius: 8px;
+        color: #202020;
+        font-weight: 600;
+        background-color: #DEC43B;
+        border: none;
+        margin-top: 2rem;
+    }
+
+    .media {
+        margin-right: 2rem;
+    }
+
+    .grafico2 {
+        display: flex;
+        background-color: #2d2d2d;
+        border: #404040 2px solid;
+        box-shadow: -1px 3px 11px -3px #39393982;
+        height: 88%;
+        width: 50%;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        border-radius: 10px;
+    }
+
+    .grafico2 h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #4B1761;
+        font-size: 50px;
+        font-weight: bold;
+        justify-content: center;
+        margin-bottom: 0;
+        margin-left: 38%;
+    }
+
+    .texto {
+        font-family: 'Poppins', sans-serif;
+        color: #4B1761;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+
+    /*FOOTER  ----------------------------------------------------------------*/
+
+    .footer {
+        width: 100%;
+        height: 5rem;
+        background-color: #4B1761;
+        margin-top: -5rem;
+    }
+
+    .logo-footer img {
+        margin-top: 1rem;
+        width: 10rem;
+        height: 3rem;
+
+    }
+
+    .container-footer {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+
+    .imagens {
+        background-color: #ffffff;
+        border-radius: 5px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .redes {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-right: 25px;
+    }
+
+    hr {
+        height: 120px;
+    }
+
+    .paginas-footer {
+        color: #ffffff;
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+        margin-top: 1rem;
+    }
+
+    .paginas-footer li,
+    .paginas-footer a {
+        color: #ffffff;
+        text-decoration: none;
+        list-style: none;
+        margin-right: 4rem;
+    }
+
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* .grafico_setores{
+    width: 5rem;
+    height: 15rem;
+ } */
+</style>
+
 <body>
 
     <div class="header">
         <div class="container">
-            <div class="logo-header"><img src="/css/img/LOGO_COMPLETA.png" alt=""> </div>
+            <div class="logo-header"><img src="LOGO_COMPLETA.png" alt=""> </div>
             <ul class="navbar">
-                <a href="/cadastroFuncionario"><li class="img-conf"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i></li></a>
+                <a href="/cadastroFuncionario">
+                    <li class="img-conf"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i></li>
+                </a>
                 <!-- Tirei o link, pois não sei para onde linkar -->
                 <li class="btn-login"><a style="width: 110px;" href=""><i
                             class="fa-solid fa-circle-user fa-lg"></i>Usuário</a></li>
             </ul>
         </div>
+
+        <div class="linha-amarela"></div>
     </div>
 
     <!-- As divs do primeiro grafico -->
+    <div class="linha1">
+        <div class="grafico1">
+            <!-- colquei um h2 só para mostrar, assumi que ira ser trocado -->
+            <section>
+                <canvas class="grafico_setores" id="chave"></canvas>
+            </section>
+        </div>
+
+        <div class="grafico2">
+            <section>
+                <canvas class="grafico_filtros" id="filtros"></canvas>
+            </section>
+        </div>
+    </div>
+
     <div class="container-dashboard">
         <div class="dashboard1">
             <div class="fluxos">
@@ -47,63 +427,62 @@
                 </div>
                 <div class="quadro2">
                     <h2>2040</h2>
-                    <h4>sensores</h4>
+                    <h5>pontos de captação</h5>
                 </div>
             </div>
-            <div class="grafico1">
-                <!-- colquei um h2 só para mostrar, assumi que ira ser trocado -->
-                <section>
-                    <canvas class="grafico_setores" id="chave"></canvas>
-                </section>
+
+            <div class="dashboard2">
+                <div class="botoes">
+                    <div class="campos-filtros">
+                        <select class="setor">
+                            <option selected disabled>Setor</option>
+                            <option value="line">Açougue</option>
+                            <option value="bar">Bebidas</option>
+                            <option value="bar">Hortifruti</option>
+                            <option value="bar">Padaria</option>
+                            <option value="bar">Peixaria</option>
+                        </select>
+
+                        <select class="mes">
+                            <option selected disabled>Mês</option>
+                            <option value="line">Janeiro</option>
+                            <option value="bar">Fevereiro</option>
+                            <option value="bar">Março</option>
+                            <option value="bar">Dezembro</option>
+                        </select>
+
+                        <!-- <input type="date" class="data" value="now">
+                        <input type="time" class="hora">
+        
+                        <span class="texto">Período 2</span>
+                        <input type="date" class="data" value="now">
+                        <input type="time" class="hora"> -->
+
+                        <select class="grafico">
+                            <option selected disabled>Tipo Gráfico</option>
+                            <option value="line">Linha</option>
+                            <option value="bar">Barra</option>
+
+                        </select>
+                    </div>
+
+                    <div class="botoes-filtros">
+                        <button class="media">Média de mercado</button>
+                        <button class="filtrar">Filtrar</button>
+                    </div>
+                </div>
+
+
             </div>
+
         </div>
     </div>
-
-     <!-- As divs do segundo grafico -->
-     <div class="container-dashboard">
-        <div class="dashboard2">
-            <div class="botoes">
-                <select class="setor">
-                    <option selected disabled>Setor</option>
-                    <option value="line">Açougue</option>
-                    <option value="bar">Bebidas</option>
-                    <option value="bar">Hortifruti</option>
-                    <option value="bar">Padaria</option>
-                    <option value="bar">Peixaria</option>
-                </select>
-                
-
-                <span class="texto">Período 1</span>
-                <input type="date" class="data" value="now">
-                <input type="time" class="hora">
-
-                <span class="texto">Período 2</span>
-                <input type="date" class="data" value="now">
-                <input type="time" class="hora">
-
-                <select class="grafico">
-                    <option selected disabled>Tipo Gráfico</option>
-                    <option value="line">Linha</option>
-                    <option value="bar">Barra</option>
-
-                </select>
-                <button class="filtrar">Filtrar</button>
-            </div>
-            <div class="grafico2">
-                <section>
-                    <canvas class="grafico_filtros" id="filtros"></canvas>
-                </section>
-            </div>
-
-        </div>
-    </div>
-
 
     <div class="footer">
         <div class="container-footer">
 
             <div class="empresa">
-                <div class="logo-footer"><img src="/css/img/LOGO_COMPLETA.png" alt="" srcset=""></div>
+                <div class="logo-footer"><img src="LOGO_COMPLETA.png" alt="" srcset=""></div>
 
 
             </div>
@@ -123,84 +502,117 @@
     // graficoSetores.canvas.height = 400;
 
     var contextoChave = document.getElementById('chave').getContext('2d');
-        contextoChave.canvas.width = 1000;
-        contextoChave.canvas.height = 300;
-        
-        var chave = new Chart(
-            contextoChave,
-            {
-                type: 'line',
-                data: {
-                    datasets: [{
-                        label: 'Chave',
-                        type: 'line',
-                        borderColor: ['white'],
-                        backgroundColor: ['red']
+    contextoChave.canvas.width = 680;
+    contextoChave.canvas.height = 400;
+
+    var chave = new Chart(
+        contextoChave,
+        {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'Padaria',
+                    type: 'line',
+                    borderColor: ['red'],
+                    backgroundColor: ['transparent']
+                },
+
+                {
+                    label: 'Peixaria',
+                    type: 'line',
+                    borderColor: ['blue'],
+                    backgroundColor: ['transparent']
+                },
+
+                {
+                    label: 'Açougue',
+                    type: 'line',
+                    borderColor: ['brown'],
+                    backgroundColor: ['transparent']
+                },
+
+                {
+                    label: 'Hortifruti',
+                    type: 'line',
+                    borderColor: ['green'],
+                    backgroundColor: ['transparent']
+                },
+
+
+                ],
+
+
+            },
+            options: {
+                legend: {
+
+                    labels: {
+                        fontColor: 'white'
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        distribution: 'series',
+                        
+                        ticks: {
+                            beginAtZero: true
+                            
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
                     }]
                 },
-                options: {
-                    scales: {
-                        xAxes: [{
-                            distribution: 'series',
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        yAxes: [{
-                            scaleLabel: {
-                                display: true,
-                                labelString: 'Chave'
-                            },
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    },
-                    animation: {
-                        duration: 0
-                    }
+                animation: {
+                    duration: 0
                 }
             }
-        );
-
-        var paginacao = {};
-        var tempo = {};
-        function obterDados(grafico, endpoint) {
-            var http = new XMLHttpRequest();
-            http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
-            http.send(null);
-            var valores = JSON.parse(http.responseText);
-            if (paginacao[endpoint] == null) {
-                paginacao[endpoint] = 0;
-            }
-            if (tempo[endpoint] == null) {
-                tempo[endpoint] = 0;
-            }
-            // Exibir à partir do último elemento exibido anteriormente
-            var ultimaPaginacao = paginacao[endpoint];
-            paginacao[endpoint] = valores.length;
-            var valores = valores.slice(ultimaPaginacao);
-            valores.forEach((valor) => {
-                //Máximo de 60 itens exibidos no gráfico
-                if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
-                    grafico.data.labels.shift();
-                    grafico.data.datasets[0].data.shift();
-                }
-
-                grafico.data.labels.push(tempo[endpoint]++);
-                grafico.data.datasets[0].data.push(parseFloat(valor));
-                grafico.update();
-            })
         }
+    );
 
-        setInterval(() => {
-            obterDados(chave, 'chave');
-        }, 1000);
+    var paginacao = {};
+    var tempo = {};
+    function obterDados(grafico, endpoint) {
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
+        http.send(null);
+        var valores = JSON.parse(http.responseText);
+        if (paginacao[endpoint] == null) {
+            paginacao[endpoint] = 0;
+        }
+        if (tempo[endpoint] == null) {
+            tempo[endpoint] = 0;
+        }
+        // Exibir à partir do último elemento exibido anteriormente
+        var ultimaPaginacao = paginacao[endpoint];
+        paginacao[endpoint] = valores.length;
+        var valores = valores.slice(ultimaPaginacao);
+        valores.forEach((valor) => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
+                grafico.data.labels.shift();
+                grafico.data.datasets[0].data.shift();
+            }
+
+            grafico.data.labels.push(tempo[endpoint]++);
+            grafico.data.datasets[0].data.push(parseFloat(valor));
+            grafico.update();
+        })
+    }
+
+    setInterval(() => {
+        obterDados(chave, 'chave');
+    }, 1000);
 
     // GRAFICO DO FLUXO TOTAL
     var graficoFluxo = document.getElementById('fluxo').getContext('2d');
     graficoFluxo.canvas.width = 1000;
-    graficoFluxo.canvas.height = 600;
+    graficoFluxo.canvas.height = 450;
 
     var GSetor = new Chart(
         graficoFluxo,
@@ -221,6 +633,12 @@
                 }]
             },
             options: {
+                legend: {
+
+                    labels: {
+                        fontColor: 'white'
+                    }
+                },
                 animation: {
                     duration: 0
                 }
@@ -230,87 +648,67 @@
 
     // GRAFICO DOS FILTROS
     var grafico_filtros = document.getElementById('filtros').getContext('2d');
-    grafico_filtros.canvas.width = 940;
+    grafico_filtros.canvas.width = 680;
     grafico_filtros.canvas.height = 400;
 
-    var GSetor = new Chart(
-        grafico_filtros,
-        {
-            type: 'line',
-            data: {
+    new Chart(grafico_filtros, {
+        type: 'bar',
 
+        data: { // json dos dados
+            // labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'], // vetor do eixo X
 
-                datasets: [{ // json e vetor
+            datasets: [{ // json e vetor
 
-                    // linha 1
-                    label: 'Padaria',
-                    data: [1, 5, 3, 10, 5, 20],
-                    borderWidth: 1,
-                    borderColor: [
-                        'rgb(244,164,96)',
-                    ],
-                    backgroundColor: [
-                        'rgb(244,164,96)',
-                    ],
-                },
-
-                { // json e vetor
-
-                    // linha 1
-                    label: 'Hortifruti',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1,
-                    borderColor: [
-                    'rgb(152,251,152)',
-                    ],
-                    backgroundColor: [
-                    'rgb(152,251,152)',
-                    ],
-                },
-
-                { // json e vetor
-
-                    // linha 1
-                    label: 'Peixaria',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1,
-                    borderColor: [
-                    'rgb(135,206,250)',
-                    ],
-                    backgroundColor: [
-                    'rgb(135,206,250)',
-                    ],
-                },
-
-                ]
+                // linha 1
+                label: '2020',
+                data: [30, 29, 28, 25, 22, 23],
+                borderWidth: 1,
+                borderColor: 'rgba(255,20,147)',
+                backgroundColor:'rgba(255,20,147)',
             },
 
+            // linha 2
+            {
 
+                label: '2021',
+                data: [80, 82, 80, 85, 80, 83],
+                borderWidth: 1,
+                borderColor: 'rgba(65,105,225)',
+                backgroundColor:'rgba(65,105,225)'
+            },
 
-            options: {
-                scales: {
-                    xAxes: [{
+            // linha 2
+            {
 
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
+                label: '2022',
+                data: [40, 12, 20, 75, 90, 9],
+                borderWidth: 1,
+                borderColor: 'rgba(214, 218, 72)',
+                backgroundColor: 'rgba(214, 218, 72)'
+            }
+
+            ],
+        },
+        options: {
+            legend: {
+
+                labels: {
+                    fontColor: 'white'
                 }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    
+                },
+
             }
         }
+    });
 
-    );
+
+
+
 
     var paginacao = {};
     var tempo = {};
