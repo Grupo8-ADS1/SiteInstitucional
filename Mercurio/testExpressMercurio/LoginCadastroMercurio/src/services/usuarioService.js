@@ -28,15 +28,16 @@ module.exports = {
             });
         });
     },
-    inserir: (nomeUsuario,senhaUsuario,emailUsuario,nivelUsuario,cpfUsuario,dtNascUsuario) => {
+    inserir: (nomeUsuario, senhaUsuario, emailUsuario, nivelUsuario, cpfUsuario, dtNascUsuario) => {
         return new Promise((aceito, rejeitado) => {
 
-            db.query('INSERT INTO usuario (nomeUsuario, senhaUsuario,emailUsuario,nivelUsuario,cpfUsuario,dtNascUsuario) values (?, ? , ? , ? , ? ,?)', [nomeUsuario, senhaUsuario,emailUsuario,nivelUsuario,cpfUsuario,dtNascUsuario], (error, results) => {
+            db.query('INSERT INTO usuario (nomeUsuario, senhaUsuario,emailUsuario,nivelUsuario,cpfUsuario,dtNascUsuario) values (?, ? , ? , ? , ? ,?)', [nomeUsuario, senhaUsuario, emailUsuario, nivelUsuario, cpfUsuario, dtNascUsuario], (error, results) => {
                 if (error) {
                     rejeitado(error);
                     return;
                 }
                 aceito(results.insertIdUsuario);
+
             });
 
         });
@@ -65,4 +66,16 @@ module.exports = {
             });
         });
     },
+    inserirEmpresa: (razaoSocial, cnpjEmpresa, porteEmpresa) => {
+        return new Promise((aceito, rejeitado) => {
+            db.query('INSERT INTO empresa (razaoSocial, cnpjEmpresa, porteEmpresa) VALUES (?, ?, ?)', [razaoSocial, cnpjEmpresa, porteEmpresa], (error, results) => {
+                if (error) {
+                    rejeitado(error);
+                    return;
+                }
+                aceito(results.insertIdEmpresa);
+            });
+        });
+    }
+    
 };

@@ -32,12 +32,12 @@
     <section class="cadastro">
         <div class="formulario">
             <h1>Cadastro</h1>
-             <form action="/login?=email&senhaCadastro=senha" method="get" >
+             <form action="/api/empresa" method="post" >
                 <div class="containerForm">
 
 
                     <span class="nomeEmpresa">Nome da empresa</span> <br>
-                    <input id="input_nomeEmpresa"> <br>
+                    <input name="razaoSocial" id="input_nomeEmpresa"> <br>
 
                     <span class="ladoTexto">
                         <span>CNPJ</span>
@@ -45,9 +45,9 @@
                     </span>
                     <span class="ladoAlado">
                         <!-- input cnpj -->
-                        <input id="input_cnpj">
+                        <input name="cnpjEmpresa" id="input_cnpj">
                         <!-- input do porte da empresa -->
-                        <select class="selecao" name="porte" id="input_porte">
+                        <select class="selecao" name="porteEmpresa" id="input_porte">
                             <option value="...">...</option>
                             <option value="p">Pequena</option>
                             <option value="m">Media</option>

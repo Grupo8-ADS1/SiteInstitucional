@@ -16,7 +16,9 @@
         <div class="container">
             <div class="logo-header"><img src="/css/img/LOGO_COMPLETA.png" alt=""> </div>
             <ul class="navbar">
-                <a href="/cadastroFuncionario"><li class="img-conf"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i></li></a>
+                <a href="/cadastroFuncionario">
+                    <li class="img-conf"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i></li>
+                </a>
                 <!-- Tirei o link, pois não sei para onde linkar -->
                 <li class="btn-login"><a style="width: 110px;" href=""><i
                             class="fa-solid fa-circle-user fa-lg"></i>Usuário</a></li>
@@ -30,32 +32,34 @@
 
             <span>Lorem ipsum dolor sit amet consectetur adipisicing</span><br><br><br>
 
+            <form action="/api/usuario" method="post">
+                <p>Nome completo:</p>
+                <input placeholder="" name="nomeUsuario" class="input-campo-um" type="text">
+                <br>
+                <p>Data de nascimento:</p>
+                <input placeholder="" name="dtNascUsuario" class="input-campo-dois" type="text">
+                <br>
+                <p>Cpf:</p>
+                <input placeholder="" name="cpfUsuario" class="input-campo-tres" type="text">
+                <br>
+                <p>Email:</p>
+                <input placeholder="" name="emailUsuario" class="input-campo-quatro" type="text">
+                <br>
+                <p>Senha:</p>
+                <input placeholder="" name="senhaUsuario" class="input-campo-cinco" type="text">
+                <br>
 
-            <p>Nome completo:</p>
-            <input placeholder="" class="input-campo-um" type="text">
-            <br>
-            <p>Data de nascimento:</p>
-            <input placeholder="" class="input-campo-dois" type="text">
-            <br>
-            <p>Cpf:</p>
-            <input placeholder="" class="input-campo-tres" type="text">
-            <br>
-            <p>Email:</p>
-            <input placeholder="" class="input-campo-quatro" type="text">
-            <br>
-            <p>Senha:</p>
-            <input placeholder="" class="input-campo-cinco" type="text">
-            <br>
-
-            <p>Função:</p>
-            <select class="selecao" id="input_funcao">
-                <option value="...">...</option>
-                <option value="a">Administrador</option>
-                <option value="c">Colaborador</option>
-            </select>
+                <p>Função:</p>
+                <select class="selecao" name="tipoUsuario" id="input_funcao">
+                    <option value="...">...</option>
+                    <option value="a">Administrador</option>
+                    <option value="c">Colaborador</option>
+                </select>
 
 
-            <button>Cadastrar</button>
+                <button type="submit" onclick="irLogar()">Cadastrar</button>
+            </form>
+
         </div>
     </div>
 
@@ -100,3 +104,9 @@
 </body>
 
 </html>
+
+<script>
+    function irLogar(){
+        window.location('/logar')
+    }
+</script>

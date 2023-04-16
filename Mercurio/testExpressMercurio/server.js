@@ -24,59 +24,59 @@ server.use('/api', routes)
 
 
 
-const app = express()
 
 
 
 
-app.use(express.json())
 
-app.use(express.static('public'))
+server.use(express.json())
+
+server.use(express.static('public'))
 
 
 
-app.get('/home', (req, res) => {
+server.get('/home', (req, res) => {
     res.sendFile(__dirname + '/home/index.html')
 });
 
-app.get('/quemSomos', (req, res) => {
+server.get('/quemSomos', (req, res) => {
     res.sendFile(__dirname + '/quemSomos/quemSomos.html');
 });
 
-app.get('/cadastro', (req, res) => {
+server.get('/cadastro', (req, res) => {
     res.sendFile(__dirname + '/cadastro/cadastro.html');
 });
 
-app.get('/login', (req, res) => {
+server.get('/logar', (req, res) => {
     res.sendFile(__dirname + '/login/login.html');
 });
 
-app.get('/dashBoard', (req, res) => {
+server.get('/dashBoard', (req, res) => {
     res.sendFile(__dirname + `/dashBoard/dashboard.html`);
 });
 
-app.get('/recuperarSenha', (req, res) => {
+server.get('/recuperarSenha', (req, res) => {
     res.sendFile(__dirname + `/recuperacaoSenha/userRecuperarSenha.html`);
 });
 
-app.get('/NovaSenha', (req, res) => {
+server.get('/NovaSenha', (req, res) => {
     res.sendFile(__dirname + `/novaSenha/novaSenha.html`);
 });
 
-app.get('/simulador', (req, res) => {
+server.get('/simulador', (req, res) => {
     res.sendFile(__dirname + `/simulador/simulador.html`);
 });
 
-app.get('/cadastroFuncionario', (req, res) => {
+server.get('/cadastroFuncionario', (req, res) => {
     res.sendFile(__dirname + `/cadastroFuncionario/cadFuncionario.html`);
 });
+//ESSAS PAGINAS DE CADASTRO DE FUNCIONARIO ESTÃO DUPLICADAS????
+// server.get('/cadastroFuncionarioInstitucional', (req, res) => {
+//     res.sendFile(__dirname + `/cadastroFuncionarioInstitucional/cadFuncionarioInstitucional.html`);
+// });
 
-app.get('/cadastroFuncionarioInstitucional', (req, res) => {
-    res.sendFile(__dirname + `/cadastroFuncionarioInstitucional/cadFuncionarioInstitucional.html`);
-});
 
 
-
-server.listen(process.env.PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${process.env.PORT}`);
+server.listen(3300, () => {
+    console.log(`Servidor rodando em http://localhost:3300`);
 });
