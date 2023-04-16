@@ -76,7 +76,7 @@ server.get('/cadastroFuncionario', (req, res) => {
 res.sendFile(__dirname + `/cadastroFuncionarioInstitucional/cadFuncionarioInstitucional.html`);
 });
 
-a
+
 
 server.listen(3300, () => {
     console.log(`Servidor rodando em http://localhost:3300`);
