@@ -176,31 +176,31 @@
     function chat() {
         div_chat.innerHTML = `
 
-        <div class="chat">
+        <div class="chat" id="chat">
         <div class="container-chat">
             <div class="header-chat">
                 <div class="container-header">
-                    <span class="titulo">Chat</span>
+                    <span class="titulo" id="tituloChat">Chat</span>
                 </div>
             </div>
-            <div class="perguntas">
+            <div class="perguntas" id="infoContato">
                 <div class="pergunta pt1" id="txt_Dash">
-                    <a onclick="resposta()"><p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p></a>
+                    <a onclick="respostaLogin()"><p class="textoPergunta txtP1">Não consigo acessar o Dashboard</p></a>
                     <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
-                <div class="pergunta pt2">
-                    <a href="../tela_recuperacao_de_senha/senha.html"><p class="textoPergunta txtP2">Esqueci minha senha</p></a>
+                <div class="pergunta pt2" id="txt_senha">
+                    <a onclick="respostaSenha()"><p class="textoPergunta txtP2">Esqueci minha senha</p></a>
                     <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
-                <div class="pergunta pt3">
-                    <a href="../tela_cadastro/cadastro.html"><p class="textoPergunta txtP3">Não consigo fazer meu cadastro</p></a>
+                <div class="pergunta pt3" id="txt_cadastro">
+                    <a onclick="respostaCadastro()"><p class="textoPergunta txtP3" >Não consigo fazer meu cadastro</p></a>
                     <i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1.5rem;"></i>
                 </div>
                 
             </div>
-            <div class="footer-chat">
+            <div class="footer-chat" id="footerChat">
                 <div class="container-footer">
-                    <span class="entrar-contato">Ainda com dúvida? <a href="">Entre em contato</a> </span>
+                    <span class="entrar-contato">Ainda com dúvida? <a onclick="contato()">Entre em contato</a> </span>
                 </div>
             </div>
         </div>
@@ -210,7 +210,32 @@
     `;
     }
 
-    function resposta(){
+    function respostaLogin(){
         txt_Dash.innerHTML = `<p style="padding: 10px; text-align: center; color: #3b3b3b">Para acessar o Dashboard você terá que fazer o <b><a href="../tela_login/login.html">login<i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1rem;"></i></a></b>`;
+    }
+
+    function respostaSenha(){
+        txt_senha.innerHTML = `<p style="padding: 10px; text-align: center; color: #3b3b3b">Você terá que fazer a <b><a href="../tela_recuperacao_de_senha/senha.html">recuperação de senha<i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1rem;"></i></a></b>
+        `;
+    }
+
+    function respostaCadastro(){
+        txt_cadastro.innerHTML = `<p style="padding: 10px; text-align: center; color: #3b3b3b">Você será redirecionado para a tela de <b><a href="../tela_cadastro/cadastro.html">cadastro<i class="fa-solid fa-chevron-right" style="color: #ffffff; font-size: 1rem;"></i></a></b>
+        `;
+    }
+
+    function contato(){
+        tituloChat.innerHTML = "Contatos"
+        infoContato.innerHTML = `<span style="padding: 10px; text-align: center; color: #3b3b3b; display: flex; justify-content: center; flex-direction: column; align-items: center"><br>
+        Qualquer dúvida que tenha entre em contato conosco!<br><br>
+        Utilizando nosso número: <b>(11) 99999-9999</b> <br>
+        Ou <br><br>
+        Utilizando nosso E-mail: <b>mercurio.contato@empresa.com</b><br>
+        
+        Estaremos esperando você entrar em contato!<br>
+            
+        </span>
+        `;
+        footerChat.innerHTML = ``;
     }
 </script>
