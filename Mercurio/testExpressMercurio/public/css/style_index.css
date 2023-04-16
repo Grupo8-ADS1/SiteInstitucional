@@ -357,7 +357,7 @@ button {
     margin-top: 6rem;
 }
 
-.container-depoimento{
+.container-depoimento {
     display: flex;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
@@ -369,7 +369,7 @@ button {
     justify-content: space-between;
 }
 
-.depoimento{
+.depoimento {
     margin-top: 3rem;
     border-radius: 10px;
     background-color: #DDCD76;
@@ -382,55 +382,55 @@ button {
     box-shadow: -1px 3px 11px -3px #00000069;
 }
 
-.depoimento p{
+.depoimento p {
     display: flex;
     text-align: justify;
 }
 
-.perfil{
+.perfil {
     width: 1.8rem;
     padding: 20px;
 }
 
 
 /*CHAT  ----------------------------------------------------------------*/
-.chat-div{
+.chat-div {
     align-items: center;
     justify-content: center;
     flex-direction: column;
     display: flex;
     font-family: 'Poppins';
- }
- 
- .botoesInteresse {
-     display: flex;
-     justify-content: center;
-     color: #4B1761;
- }
- 
- #btnChat {
-     margin-top: 1rem;
-     border: none;
-     font-size: 1rem;
-     color: #4B1761;
-     background-color: transparent;
-     margin-left: 1.6rem;
- }
- 
- #btnCadastro {
+}
+
+.botoesInteresse {
+    display: flex;
+    justify-content: center;
+    color: #4B1761;
+}
+
+#btnChat {
+    margin-top: 1rem;
+    border: none;
+    font-size: 1rem;
+    color: #4B1761;
+    background-color: transparent;
+    margin-left: 1.6rem;
+}
+
+#btnCadastro {
     margin-left: 0;
-     margin-top: 1rem;
-     border: none;
-     background-color: transparent;
-     font-size: 1rem;
- }
- 
- #btnCadastro a {
-   
-     color: #4B1761;
- }
- 
- .interesse {
+    margin-top: 1rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+#btnCadastro a {
+
+    color: #4B1761;
+}
+
+.interesse {
     display: flex;
     font-family: 'Poppins', sans-serif;
     color: #3b3b3b;
@@ -438,15 +438,15 @@ button {
     font-size: 1.5rem;
     justify-content: center;
     margin-top: -40rem;
- }
- 
- .botoesInteresse i {
-     margin-right: 8px;
- }
+}
+
+.botoesInteresse i {
+    margin-right: 8px;
+}
 
 
 /* imagem onda */
-.onda2{
+.onda2 {
     width: 600px;
     z-index: -1;
     position: relative;
@@ -455,7 +455,7 @@ button {
     margin-left: 55rem;
 }
 
-.onda1{
+.onda1 {
     width: 600px;
     z-index: -1;
     position: relative;

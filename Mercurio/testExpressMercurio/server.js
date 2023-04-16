@@ -47,12 +47,12 @@ server.get('/cadastro', (req, res) => {
     res.sendFile(__dirname + '/cadastro/cadastro.html');
 });
 
-server.get('/logar', (req, res) => {
+server.get('/login', (req, res) => {
     res.sendFile(__dirname + '/login/login.html');
 });
 
 server.get('/dashBoard', (req, res) => {
-    res.sendFile(__dirname + `/dashBoard/dashboard.html`);
+    res.sendFile(__dirname + `/dat-acqu-ino/index.html`);
 });
 
 server.get('/recuperarSenha', (req, res) => {

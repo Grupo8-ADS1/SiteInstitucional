@@ -26,7 +26,9 @@
         <div class="container">
             <div class="logo-header"><img src="/css/img/LOGO_COMPLETA.png" alt=""> </div>
             <ul class="navbar">
-                <a href="/cadastroFuncionario"><li class="img-conf"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i></li></a>
+                <a href="/cadastroFuncionario">
+                    <li class="img-conf"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i></li>
+                </a>
                 <!-- Tirei o link, pois não sei para onde linkar -->
                 <li class="btn-login"><a style="width: 110px;" href=""><i
                             class="fa-solid fa-circle-user fa-lg"></i>Usuário</a></li>
@@ -59,8 +61,8 @@
         </div>
     </div>
 
-     <!-- As divs do segundo grafico -->
-     <div class="container-dashboard">
+    <!-- As divs do segundo grafico -->
+    <div class="container-dashboard">
         <div class="dashboard2">
             <div class="botoes">
                 <select class="setor">
@@ -71,7 +73,7 @@
                     <option value="bar">Padaria</option>
                     <option value="bar">Peixaria</option>
                 </select>
-                
+
 
                 <span class="texto">Período 1</span>
                 <input type="date" class="data" value="now">
@@ -116,86 +118,85 @@
 </html>
 
 <script>
-
     // GRAFICO DO TOTAL DE SETORES
     // var graficoSetores = document.getElementById('setores').getContext('2d');
     // graficoSetores.canvas.width = 800;
     // graficoSetores.canvas.height = 400;
 
     var contextoChave = document.getElementById('chave').getContext('2d');
-        contextoChave.canvas.width = 1000;
-        contextoChave.canvas.height = 300;
-        
-        var chave = new Chart(
-            contextoChave,
-            {
-                type: 'line',
-                data: {
-                    datasets: [{
-                        label: 'Chave',
-                        type: 'line',
-                        borderColor: ['white'],
-                        backgroundColor: ['red']
+    contextoChave.canvas.width = 1000;
+    contextoChave.canvas.height = 300;
+
+    var chave = new Chart(
+        contextoChave, {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'Chave',
+                    type: 'line',
+                    borderColor: ['white'],
+                    backgroundColor: ['red']
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        distribution: 'series',
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Chave'
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
                     }]
                 },
-                options: {
-                    scales: {
-                        xAxes: [{
-                            distribution: 'series',
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        yAxes: [{
-                            scaleLabel: {
-                                display: true,
-                                labelString: 'Chave'
-                            },
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    },
-                    animation: {
-                        duration: 0
-                    }
+                animation: {
+                    duration: 0
                 }
             }
-        );
-
-        var paginacao = {};
-        var tempo = {};
-        function obterDados(grafico, endpoint) {
-            var http = new XMLHttpRequest();
-            http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
-            http.send(null);
-            var valores = JSON.parse(http.responseText);
-            if (paginacao[endpoint] == null) {
-                paginacao[endpoint] = 0;
-            }
-            if (tempo[endpoint] == null) {
-                tempo[endpoint] = 0;
-            }
-            // Exibir à partir do último elemento exibido anteriormente
-            var ultimaPaginacao = paginacao[endpoint];
-            paginacao[endpoint] = valores.length;
-            var valores = valores.slice(ultimaPaginacao);
-            valores.forEach((valor) => {
-                //Máximo de 60 itens exibidos no gráfico
-                if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
-                    grafico.data.labels.shift();
-                    grafico.data.datasets[0].data.shift();
-                }
-
-                grafico.data.labels.push(tempo[endpoint]++);
-                grafico.data.datasets[0].data.push(parseFloat(valor));
-                grafico.update();
-            })
         }
+    );
 
-        setInterval(() => {
-            obterDados(chave, 'chave');
-        }, 1000);
+    var paginacao = {};
+    var tempo = {};
+
+    function obterDados(grafico, endpoint) {
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
+        http.send(null);
+        var valores = JSON.parse(http.responseText);
+        if (paginacao[endpoint] == null) {
+            paginacao[endpoint] = 0;
+        }
+        if (tempo[endpoint] == null) {
+            tempo[endpoint] = 0;
+        }
+        // Exibir à partir do último elemento exibido anteriormente
+        var ultimaPaginacao = paginacao[endpoint];
+        paginacao[endpoint] = valores.length;
+        var valores = valores.slice(ultimaPaginacao);
+        valores.forEach((valor) => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
+                grafico.data.labels.shift();
+                grafico.data.datasets[0].data.shift();
+            }
+
+            grafico.data.labels.push(tempo[endpoint]++);
+            grafico.data.datasets[0].data.push(parseFloat(valor));
+            grafico.update();
+        })
+    }
+
+    setInterval(() => {
+        obterDados(chave, 'chave');
+    }, 1000);
 
     // GRAFICO DO FLUXO TOTAL
     var graficoFluxo = document.getElementById('fluxo').getContext('2d');
@@ -203,8 +204,7 @@
     graficoFluxo.canvas.height = 600;
 
     var GSetor = new Chart(
-        graficoFluxo,
-        {
+        graficoFluxo, {
             type: 'doughnut',
             data: { // json dos dados
                 labels: [
@@ -234,53 +234,52 @@
     grafico_filtros.canvas.height = 400;
 
     var GSetor = new Chart(
-        grafico_filtros,
-        {
+        grafico_filtros, {
             type: 'line',
             data: {
 
 
                 datasets: [{ // json e vetor
 
-                    // linha 1
-                    label: 'Padaria',
-                    data: [1, 5, 3, 10, 5, 20],
-                    borderWidth: 1,
-                    borderColor: [
-                        'rgb(244,164,96)',
-                    ],
-                    backgroundColor: [
-                        'rgb(244,164,96)',
-                    ],
-                },
+                        // linha 1
+                        label: 'Padaria',
+                        data: [1, 5, 3, 10, 5, 20],
+                        borderWidth: 1,
+                        borderColor: [
+                            'rgb(244,164,96)',
+                        ],
+                        backgroundColor: [
+                            'rgb(244,164,96)',
+                        ],
+                    },
 
-                { // json e vetor
+                    { // json e vetor
 
-                    // linha 1
-                    label: 'Hortifruti',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1,
-                    borderColor: [
-                    'rgb(152,251,152)',
-                    ],
-                    backgroundColor: [
-                    'rgb(152,251,152)',
-                    ],
-                },
+                        // linha 1
+                        label: 'Hortifruti',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1,
+                        borderColor: [
+                            'rgb(152,251,152)',
+                        ],
+                        backgroundColor: [
+                            'rgb(152,251,152)',
+                        ],
+                    },
 
-                { // json e vetor
+                    { // json e vetor
 
-                    // linha 1
-                    label: 'Peixaria',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1,
-                    borderColor: [
-                    'rgb(135,206,250)',
-                    ],
-                    backgroundColor: [
-                    'rgb(135,206,250)',
-                    ],
-                },
+                        // linha 1
+                        label: 'Peixaria',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1,
+                        borderColor: [
+                            'rgb(135,206,250)',
+                        ],
+                        backgroundColor: [
+                            'rgb(135,206,250)',
+                        ],
+                    },
 
                 ]
             },
@@ -314,6 +313,7 @@
 
     var paginacao = {};
     var tempo = {};
+
     function obterDados(grafico, endpoint) {
         var http = new XMLHttpRequest();
         http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
@@ -345,5 +345,4 @@
     setInterval(() => {
         obterDados(chave, 'chave');
     }, 1000);
-
 </script>

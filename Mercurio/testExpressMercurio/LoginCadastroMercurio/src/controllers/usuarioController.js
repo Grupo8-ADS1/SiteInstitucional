@@ -62,7 +62,7 @@ module.exports = {
                     cpfUsuario,
                     dtNascUsuario
                 };
-                res.redirect('/logar');
+                res.redirect('/login');
             } catch (error) {
                 json.error = error.message;
                 res.status(500).json(json);
@@ -116,17 +116,17 @@ module.exports = {
         let razaoSocial = req.body.razaoSocial;
         let cnpjEmpresa = req.body.cnpjEmpresa;
         let porteEmpresa = req.body.porteEmpresa;
-     
-        if (razaoSocial && cnpjEmpresa) {
+
+        if (razaoSocial && cnpjEmpresa && porteEmpresa) {
             try {
-                let empresaId = await usuarioService.inserirEmpresa(razaoSocial, cnpjEmpresa, porteEmpresa,);
+                let empresaId = await usuarioService.inserirEmpresa(razaoSocial, cnpjEmpresa, porteEmpresa, );
                 json.result = {
                     idEmpresa: empresaId,
                     razaoSocial,
                     cnpjEmpresa,
                     porteEmpresa
                 };
-                res.redirect('/cadastroFuncionario');
+                res.redirect('/index.html');
             } catch (error) {
                 json.error = error.message;
                 res.status(500).json(json);

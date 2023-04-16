@@ -198,7 +198,7 @@ button {
     margin-left: 30%;
 }
 
-.formulario button a{
+.formulario button a {
     color: #FFFFFF;
 }
 
@@ -240,15 +240,13 @@ button {
     margin: 5px;
 }
 
-.formulario .confSenha
-    {
-        margin-top: 2rem;
-    }
+.formulario .confSenha {
+    margin-top: 2rem;
+}
 
-.formulario .confSenha-icon
-    {
-        margin-top: 2.3rem;
-    }
+.formulario .confSenha-icon {
+    margin-top: 2.3rem;
+}
 
 
 /**Footer**/

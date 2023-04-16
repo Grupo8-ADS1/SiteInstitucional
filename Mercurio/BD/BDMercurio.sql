@@ -52,3 +52,9 @@ CREATE TABLE captacao
 
 truncate usuario;
 
+truncate empresa;
+
+select * from usuario;
+
+select * from empresa;
+

@@ -9,10 +9,11 @@ body {
 :root {
     --colorAll: #3b3b3b;
     --colorBlue: #0066ff;
-    --colorYellow:  #DEC43B;
+    --colorYellow: #DEC43B;
 }
 
-a, button{
+a,
+button {
     cursor: pointer;
 }
 
@@ -225,7 +226,7 @@ a, button{
     justify-content: space-between;
     margin-top: 10rem;
     font-family: 'Poppins', sans-serif;
-} 
+}
 
 .conheca {
     display: flex;
@@ -234,8 +235,8 @@ a, button{
 }
 
 .vector {
-   margin-top: 200px;
-   width: 60px;
+    margin-top: 200px;
+    width: 60px;
 }
 
 .tltConheca {
@@ -244,7 +245,7 @@ a, button{
     margin-top: 50px;
 }
 
-.Imgline{
+.Imgline {
     width: 100px;
     height: 8px;
     margin-left: 55%;
@@ -357,7 +358,7 @@ a, button{
     margin-right: auto;
 }
 
-.int4  {
+.int4 {
     background-image: url('./img/gustavo.jpg');
     background-size: cover;
 }
@@ -408,12 +409,12 @@ a, button{
 }
 
 /*CHAT  ----------------------------------------------------------------*/
-.chat-div{
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   display: flex;
-   font-family: 'Poppins';
+.chat-div {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    font-family: 'Poppins';
 }
 
 .botoesInteresse {
@@ -446,7 +447,7 @@ a, button{
     color: #3b3b3b;
 }
 
-.cadastrobtn{
+.cadastrobtn {
     color: #4B1761;
 }
 
@@ -454,14 +455,7 @@ a, button{
     margin-right: 8px;
 }
 
-/* Vector do final da page */
 
-/* .vectorFinal {
-    background-image: url('img/Vector 5.png');
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 500px;
-} */
 
 
 
@@ -474,7 +468,7 @@ a, button{
     margin-top: 7rem;
 }
 
-.logo-footer img{
+.logo-footer img {
     margin-top: 2rem;
     width: 10rem;
     height: 3rem;

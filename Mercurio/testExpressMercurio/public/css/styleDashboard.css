@@ -9,10 +9,11 @@ body {
 :root {
     --colorAll: #3b3b3b;
     --colorBlue: #0066ff;
-    --colorYellow:  #DEC43B;
+    --colorYellow: #DEC43B;
 }
 
-a, button{
+a,
+button {
     cursor: pointer;
 }
 
@@ -79,7 +80,7 @@ a, button{
 
 /* Primeiro Gráfico */
 
-.container-dashboard{
+.container-dashboard {
     display: flex;
     width: 80%;
     margin: auto;
@@ -91,7 +92,8 @@ a, button{
     height: 500px;
     width: 100%;
 }
-.fluxos{
+
+.fluxos {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -100,7 +102,7 @@ a, button{
     align-items: center;
 }
 
-.quadro1{
+.quadro1 {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     height: 40%;
@@ -109,7 +111,7 @@ a, button{
     box-shadow: -1px 3px 11px -3px #00000058;
 }
 
-.quadro1 h2{
+.quadro1 h2 {
     color: #4B1761;
     font-size: 55px;
     font-weight: bold;
@@ -118,7 +120,7 @@ a, button{
     margin-left: 22%;
 }
 
-.quadro2{
+.quadro2 {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     height: 40%;
@@ -127,7 +129,7 @@ a, button{
     box-shadow: -1px 3px 11px -3px #00000058;
 }
 
-.quadro2 h2{
+.quadro2 h2 {
     color: #4B1761;
     font-size: 50px;
     font-weight: bold;
@@ -136,7 +138,7 @@ a, button{
     margin-left: 25%;
 }
 
-.quadro2 h4{
+.quadro2 h4 {
     color: #4D4B4B;
     font-size: 20px;
     justify-content: center;
@@ -144,7 +146,7 @@ a, button{
     margin-left: 32%;
 }
 
-.grafico1{
+.grafico1 {
     display: flex;
     background-color: #ffffff;
     height: 88%;
@@ -156,7 +158,7 @@ a, button{
     box-shadow: -1px 3px 11px -3px #00000058;
 }
 
-.grafico1 h2{
+.grafico1 h2 {
     font-family: 'Poppins', sans-serif;
     color: #4B1761;
     font-size: 50px;
@@ -176,7 +178,7 @@ a, button{
     width: 100%;
 }
 
-.botoes{
+.botoes {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -185,7 +187,10 @@ a, button{
     align-items: center;
 }
 
-.setor, .data, .hora, .grafico{
+.setor,
+.data,
+.hora,
+.grafico {
     font-family: 'Poppins', sans-serif;
     width: 90%;
     height: 35px;
@@ -196,7 +201,7 @@ a, button{
     background-color: #ffffff;
 }
 
-.filtrar{
+.filtrar {
     font-family: 'Poppins', sans-serif;
     width: 90%;
     height: 35px;
@@ -207,7 +212,7 @@ a, button{
     border: none;
 }
 
-.grafico2{
+.grafico2 {
     display: flex;
     background-color: #ffffff;
     height: 88%;
@@ -219,7 +224,7 @@ a, button{
     box-shadow: -1px 3px 11px -3px #00000058;
 }
 
-.grafico2 h2{
+.grafico2 h2 {
     font-family: 'Poppins', sans-serif;
     color: #4B1761;
     font-size: 50px;
@@ -230,16 +235,17 @@ a, button{
     margin-top: 22%;
 }
 
-.texto{
+.texto {
     font-family: 'Poppins', sans-serif;
     color: #4B1761;
     font-size: 15px;
     font-weight: bold;
 }
 
-.data{
+.data {
     margin-top: -15px;
 }
+
 /*FOOTER  ----------------------------------------------------------------*/
 
 .footer {
@@ -249,7 +255,7 @@ a, button{
     margin-top: 4rem;
 }
 
-.logo-footer img{
+.logo-footer img {
     margin-top: 2rem;
     width: 10rem;
     height: 3rem;
