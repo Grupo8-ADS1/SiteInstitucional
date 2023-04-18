@@ -34,10 +34,10 @@
             <form action="/api/login" method="post"> 
 
                 <input placeholder="eduardo@gmail.com" class="input email" name="emailUsuario" type="text"
-                    id="inputLogin">
+                    id="inputLogin" required oninvalid="this.setCustomValidity('O campo e-mail está vazio')" oninput="setCustomValidity('')">
                 <i class="fa-solid fa-user icon" style="color: #4f4f4f;"></i><br>
 
-                <input placeholder="********" type="password" name="senhaUsuario" class="input senha " id="inputSenha">
+                <input placeholder="********" type="password" name="senhaUsuario" class="input senha " id="inputSenha"  required oninvalid="this.setCustomValidity('O campo senha está vazio')" oninput="setCustomValidity('')">
                 <i class="fa-solid fa-lock icon" style="color: #4f4f4f;"></i> <br>
 
                 <div class="links-form">

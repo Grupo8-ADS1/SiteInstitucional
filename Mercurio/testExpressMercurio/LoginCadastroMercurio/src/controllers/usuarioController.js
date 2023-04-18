@@ -126,7 +126,7 @@ module.exports = { // popula o array com os valores buscados pelo mysql
                     cnpjEmpresa,
                     porteEmpresa
                 };
-                res.redirect('/index.html');
+                res.redirect('/CadastroFuncionarioInstitucional');
             } catch (error) {
                 json.error = error.message;
                 res.status(500).json(json);
