@@ -48,25 +48,12 @@
                         <input name="cnpjEmpresa" id="input_cnpj">
                         <!-- input do porte da empresa -->
                         <select class="selecao" name="porteEmpresa" id="input_porte">
-                            <option value="...">...</option>
-                            <option value="p">Pequena</option>
-                            <option value="m">Media</option>
-                            <option value="g">Grande</option>
+                            <option selected disabled>Porte</option>
+                            <option value="Pequena">Pequena</option>
+                            <option value="Média">Media</option>
+                            <option value="Grande">Grande</option>
                         </select>
                     </span>
-
-                    <span class="ladoTexto">
-                        <span>Email</span>
-                        <span>Senha</span>
-                    </span>
-                    <span class="ladoAlado2">
-                        <!-- input email -->
-                        <input name="email" id="input_email" type="email">
-                        <!-- input senha -->
-                        <input name="senha" id="input_senha" type="password">
-                    </span>
-
-
 
                 </div>
                 <button type="submit" onclick="">Continuar</button>
@@ -115,9 +102,6 @@
         </div>
     </div>
 
-
-
-
 </body>
 
 </html>
@@ -140,7 +124,7 @@
         }
         if (login.endsWith(".com") && indice_empresa >= 0 && senha.length >= 8 && login.indexOf("@") >= 0) {
             alert(`Cadastrado com Sucesso`)
-            window.location('/cadastroFuncionario')
+            window.location('/cadastroFuncionarioInstitucional')
         } else {
             alert(`Falha ao cadastrar`)
         }

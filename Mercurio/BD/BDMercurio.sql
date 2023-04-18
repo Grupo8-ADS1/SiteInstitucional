@@ -5,11 +5,11 @@ CREATE TABLE empresa
 (
 	idEmpresa INT AUTO_INCREMENT PRIMARY KEY,
     razaoSocial VARCHAR(50),
-    cnpjEmpresa VARCHAR(14),
+    cnpjEmpresa VARCHAR(18),
     porteEmpresa VARCHAR(20)
 );
 
-CREATE TABLE setor
+CREATE TABLE espaco
 (
 	idSetor INT AUTO_INCREMENT PRIMARY KEY,
 	setor VARCHAR(50),
@@ -30,31 +30,23 @@ CREATE TABLE usuario
     CONSTRAINT FOREIGN KEY(fkEmpresa) REFERENCES empresa(idEmpresa)
 );
 
-insert into usuario (nomeUsuario, senhaUsuario, emailUsuario) values
-('João Vitor Cordeiro','Joao@2003','joao@mercurio.com');
-
-select * from usuario;
-
 CREATE TABLE sensor
 (
 	idSensor INT AUTO_INCREMENT PRIMARY KEY,
     fkSetor INT,
-    CONSTRAINT FOREIGN KEY(fkSetor) REFERENCES setor(idSetor)
+    CONSTRAINT FOREIGN KEY(fkSetor) REFERENCES espaco(idSetor)
 );
 
 CREATE TABLE captacao
 (
 	idCaptacao INT AUTO_INCREMENT PRIMARY KEY,
     dthCaptacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    statusCaptacao TINYINT,
     fkSensor INT,
     CONSTRAINT FOREIGN KEY(fkSensor) REFERENCES sensor(idSensor)
 );
 
-truncate usuario;
-
-truncate empresa;
-
+select * from empresa;
 select * from usuario;
 
-select * from empresa;
 

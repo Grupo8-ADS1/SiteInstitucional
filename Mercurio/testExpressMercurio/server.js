@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); 
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const routes = require('./LoginCadastroMercurio/src/routes');
@@ -14,20 +14,6 @@ server.use(bodyParser.urlencoded({
 }));
 
 server.use('/api', routes)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 server.use(express.json())
 
@@ -79,5 +65,5 @@ res.sendFile(__dirname + `/cadastroFuncionarioInstitucional/cadFuncionarioInstit
 
 
 server.listen(3300, () => {
-    console.log(`Servidor rodando em http://localhost:3300`);
+    console.log(`Servidor rodando em http://localhost:3300`); 
 });

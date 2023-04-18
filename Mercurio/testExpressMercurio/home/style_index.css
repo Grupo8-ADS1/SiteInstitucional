@@ -164,14 +164,11 @@ button {
 }
 
 .lucros {
-    text-align: justify;
     width: 11rem;
     height: 250px;
     width: 200px;
     border-radius: 20px;
     padding: 20px;
-
-
 }
 
 .Plucros {
@@ -198,6 +195,8 @@ button {
 }
 
 .texto-lucros {
+    display: flex;
+    text-align: center;
     color: #3b3b3b;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -208,7 +207,6 @@ button {
 }
 
 .responsabilidade {
-    text-align: justify;
     width: 11rem;
     height: 250px;
     width: 200px;
@@ -262,7 +260,6 @@ button {
 }
 
 .pesquisa {
-    text-align: justify;
     width: 11rem;
     height: 250px;
     width: 200px;
@@ -343,8 +340,6 @@ button {
     width: 10rem;
     height: 0.3rem;
 }
-
-
 
 /* Depoimentos */
 .depoimentos_tlt {

@@ -1,6 +1,6 @@
-const usuarioService = require('../services/usuarioService')
+const usuarioService = require('../services/usuarioService') 
 
-module.exports = {
+module.exports = { // popula o array com os valores buscados pelo mysql
     buscarTodos: async (req, res) => {
         let json = {
             error: '',
@@ -93,7 +93,7 @@ module.exports = {
             json.error = 'Campos não enviados'
         };
 
-        res.json(json)
+        res.json(json) // recebe como JSOn (traz os dados para leitura)
 
 
     },

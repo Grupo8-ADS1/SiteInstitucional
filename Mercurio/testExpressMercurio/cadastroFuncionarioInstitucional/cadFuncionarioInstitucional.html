@@ -29,34 +29,34 @@
         <div class="formulario">
             <h1> Cadastre um novo colaborador</h1>
 
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing</span><br><br><br>
+            <form action="/api/usuario" method="post">
+                <p>Nome completo:</p>
+                <input placeholder="" name="nomeUsuario" class="input-campo-um" type="text">
+                <br>
+                <p>Data de nascimento:</p>
+                <input placeholder="" name="dtNascUsuario" class="input-campo-dois" type="date">
+                <br>
+                <p>Cpf:</p>
+                <input placeholder="" name="cpfUsuario" class="input-campo-tres" type="text">
+                <br>
+                <p>Email:</p>
+                <input placeholder="" name="emailUsuario" class="input-campo-quatro" type="text">
+                <br>
+                <p>Senha:</p>
+                <input placeholder="" name="senhaUsuario" class="input-campo-cinco" type="password">
+                <br>
+
+                <p>Função:</p>
+                <select class="selecao" name="nivelUsuario" id="input_funcao">
+                    <option selected disabled>Função</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Colaborador">Colaborador</option>
+                </select>
 
 
-            <p>Nome completo:</p>
-            <input placeholder="" class="input-campo-um" type="text">
-            <br>
-            <p>Data de nascimento:</p>
-            <input placeholder="" class="input-campo-dois" type="text">
-            <br>
-            <p>Cpf:</p>
-            <input placeholder="" class="input-campo-tres" type="text">
-            <br>
-            <p>Email:</p>
-            <input placeholder="" class="input-campo-quatro" type="text">
-            <br>
-            <p>Senha:</p>
-            <input placeholder="" class="input-campo-cinco" type="text">
-            <br>
+                <button type="submit" onclick="irLogar()">Cadastrar</button>
+            </form>
 
-            <p>Função:</p>
-            <select class="selecao" id="input_funcao">
-                <option value="...">...</option>
-                <option value="a">Administrador</option>
-                <option value="c">Colaborador</option>
-            </select>
-
-
-            <button>Cadastrar</button>
         </div>
     </div>
 

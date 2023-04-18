@@ -41,8 +41,10 @@
         </div>
         <div class="função">
             <div class="resultado" id="resposta">
-                <h3>AQUI VAI EXPLICAR COMO FUNCIONA O GRAFICO PARA O CLIENTE ENTENDER PAPAPAPAPAPA</h3>
-                <canvas id="myChart"> </canvas>
+                <h3>A mercúrio te oferece</h3>
+                <div class="grafico">
+                    <canvas id="myChart"> </canvas>
+                </div>
             </div>
 
         </div>
@@ -92,6 +94,43 @@
 
 </html>
 
+<script>
+    const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['FaturamentoMensal', 'FaturamentoTrimestral', 'FaturamentoSemestral',
+                    'FaturamentoAnual'
+                ],
+                datasets: [{
+                        label: 'Faturamento Atual',
+                        data: [],
+                        borderColor: 'red',
+                        backgroundColor: 'red',
+                        borderWidth: 2
+                    }, {
+                        label: 'Faturamento com Mercúrio',
+                        data: [],
+                        borderColor: 'rgb(50,205,50)',
+                        backgroundColor: 'rgb(50,205,50)',
+                        borderWidth: 2
+                    }
+
+
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    
+
+</script>
 
 <script>
     var faturamentoMensalControle;
@@ -107,11 +146,6 @@
     var faturamentoTrimestralControle;
     var faturamentoSemestralControle;
     var faturamentoAnualControle
-
-
-
-
-
 
     function calcular() {
         numVendas = Number(inputNumVendas.value);
@@ -134,9 +168,22 @@
 
 
 
+        // resposta.innerHTML += `
+        // Após analisarmos os dados do seu estabelecimento, constatamos que o ticket médio dos seus clientes é de ${ticketMedioControle.toFixed(4)}. <br> 
+        // No entanto, com um aumento na satisfação dos seus clientes, esse valor poderia ser elevado para ${ticketMedioExperimento.toFixed(4)}. 
+        // Acreditamos que essa oportunidade de melhorar seus resultados financeiros seja um grande incentivo para investir em ações que possam aumentar a satisfação dos seus clientes e, consequentemente, elevar o ticket médio do seu estabelecimento. Nós da Mercurio estamos à disposição para ajudá-lo nesse processo e transformar esses dados em resultados concretos.
+        // <div class="inner">
+        // Após análise dos dados do seu estabelecimento, verificamos que o ticket médio dos seus clientes é de <b>${(ticketMedioControle).toFixed(2)}</b>.
+        // Porém, ao promover melhorias que visem aumentar a satisfação dos clientes, esse valor pode ser elevado para <b>${(ticketMedioExperimento).toFixed(2)}</b>. 
+        // Essa é uma oportunidade valiosa para investir em ações que possam elevar a satisfação dos seus clientes e, consequentemente, aumentar o faturamento do seu estabelecimento. A equipe Mercúrio está à disposição para auxiliá-lo nesse processo e transformar esses dados em resultados reais. Acreditamos que esse seja um passo importante para impulsionar o seu negócio e alcançar o sucesso desejado.
+        // </div>
+        // `
+
         resposta.innerHTML += `
-        Após análise dos seus dados, constatamos que o ticket médio dos seus clientes é de ${ticketMedioControle}. No entanto, investir em ações que melhorem a satisfação dos seus clientes pode elevar esse valor para ${ticketMedioExperimento}. Essa é uma oportunidade valiosa para aumentar o faturamento do seu estabelecimento e estamos prontos para ajudá-lo nesse processo. Entre em contato conosco e transforme esses dados em resultados reais para o seu negócio.
-        `
+        <div class = "inner">
+            Analisando os dados do seu estabelecimento, identificamos que o ticket médio dos seus clientes é de <b style="color:red;">R$${ticketMedioControle.toFixed(4)}</b>. No entanto, com um aumento na satisfação dos clientes, esse valor poderia ser elevado para <b style="color:green;">R$${ticketMedioExperimento.toFixed(4)}</b>. Essa oportunidade de melhoria nos resultados financeiros é um incentivo para investir em ações que possam aumentar a satisfação dos clientes e, consequentemente, elevar o ticket médio do seu estabelecimento. A equipe da Mercurio está à disposição para auxiliá-lo nesse processo e transformar esses dados em resultados concretos. Acreditamos que essa seja uma estratégia valiosa para impulsionar o seu negócio e alcançar o sucesso desejado.
+        </div>
+        `;
 
         const ctx = document.getElementById('myChart');
 
@@ -147,7 +194,7 @@
                     'FaturamentoAnual'
                 ],
                 datasets: [{
-                        label: 'Faturamento Controle',
+                        label: 'Faturamento Atual',
                         data: [faturamentoMensalControle, faturamentoTrimestralControle,
                             faturamentoSemestralControle, faturamentoAnualControle,
                         ],
@@ -155,7 +202,7 @@
                         backgroundColor: 'red',
                         borderWidth: 2
                     }, {
-                        label: 'Faturamento Experimento',
+                        label: 'Faturamento com Mercúrio',
                         data: [faturamentoMensalExperimento, faturamentoTrimestralExperimento,
                             faturamentoSemestralExperimento, faturamentoAnualExperimento,
                         ],

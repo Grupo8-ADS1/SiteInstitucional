@@ -1,15 +1,17 @@
-const mysql = require('mysql2');
+const mysql = require('mysql2'); // função de conectar com o banco 
+                                // require - puxa as bibliotecas do Mysql para o uso
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'joao@2003',
-    database: 'Mercurio'
+const connection = mysql.createConnection({ // criando a conexão com o banco
+    host: 'localhost',  // server local
+    user: 'evelyn', // usuario do banco local
+    password: 'sptech', // senha do banco local
+    database: 'mercurio' // database do site
 });
 
-connection.connect((error) => {
-    if (error) throw error;
+connection.connect((error) => { // tratamento de erro
+    if (error) throw error; // traz o erro da conexão
+    
     console.log(`Conectado ao banco de dados Mercurio com SUCESSO `)
 });
 
-module.exports = connection;
+module.exports = connection; // inicia a conexão
