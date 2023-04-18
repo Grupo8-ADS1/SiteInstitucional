@@ -164,7 +164,7 @@ button {
 }
 
 .lucros {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
     height: 250px;
     width: 200px;
@@ -208,7 +208,7 @@ button {
 }
 
 .responsabilidade {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
     height: 250px;
     width: 200px;
@@ -262,7 +262,8 @@ button {
 }
 
 .pesquisa {
-    text-align: justify;
+    text-align: center;
+
     width: 11rem;
     height: 250px;
     width: 200px;
@@ -384,7 +385,7 @@ button {
 
 .depoimento p {
     display: flex;
-    text-align: justify;
+    text-align: center;
 }
 
 .perfil {

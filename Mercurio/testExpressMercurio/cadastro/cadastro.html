@@ -37,7 +37,7 @@
 
 
                     <span class="nomeEmpresa">Nome da empresa</span> <br>
-                    <input name="razaoSocial" id="input_nomeEmpresa"> <br>
+                    <input name="razaoSocial" id="input_nomeEmpresa" required oninvalid="this.setCustomValidity('O Campo deve ser preencido')" oninput="setCustomValidity('')"> <br>
 
                     <span class="ladoTexto">
                         <span>CNPJ</span>
@@ -45,7 +45,7 @@
                     </span>
                     <span class="ladoAlado">
                         <!-- input cnpj -->
-                        <input name="cnpjEmpresa" id="input_cnpj">
+                        <input name="cnpjEmpresa" id="input_cnpj" required oninvalid="this.setCustomValidity('O Campo deve ser preencido com o CNPJ')" oninput="setCustomValidity('')">
                         <!-- input do porte da empresa -->
                         <select class="selecao" name="porteEmpresa" id="input_porte">
                             <option selected disabled>Porte</option>
@@ -58,7 +58,8 @@
                 </div>
                 <button type="submit" onclick="">Continuar</button>
                 <br>
-                <a style="margin-left: 25px;" href="/cadastroFuncionarioInstitucional">Cadastrar novo funcionario</a>
+                
+                <span class="cadastrar_novo_fun"><a style="margin-left: 25px;" href="/cadastroFuncionarioInstitucional">Cadastrar novo funcionario</a></span>
             </form>
 
         </div>

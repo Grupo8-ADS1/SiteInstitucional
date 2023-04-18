@@ -87,7 +87,7 @@ button {
 
 /*BNNER ---------------------------------------------------------------*/
 .banner {
-    background-image: url('img/image 30.png');
+    background-image: url(img/img_quemSomos.png);
     background-size: cover;
     /*imagem sempre ocupa toda a tela*/
     ;
@@ -128,7 +128,7 @@ button {
 }
 
 .missao {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
 }
 
@@ -166,13 +166,13 @@ button {
 }
 
 .visao {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
 
 }
 
 .valores {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
 }
 
@@ -216,7 +216,6 @@ button {
 /* Conheça a mercurio */
 .conhecaNois {
     display: flex;
-    margin-top: 50px;
 }
 
 .container-pt3 {
@@ -224,7 +223,7 @@ button {
     height: 100px;
     margin: auto;
     justify-content: space-between;
-    margin-top: 10rem;
+    margin-top: 7rem;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -242,7 +241,7 @@ button {
 .tltConheca {
     font-size: 45px;
     color: #4D4B4B;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .Imgline {
@@ -254,9 +253,9 @@ button {
 
 .texto-conheca {
     color: #4D4B4B;
-    font-size: 22px;
+    font-size:18px;
     margin-left: 20px;
-    margin-top: 70px;
+    margin-top: 90px;
     margin-right: 40px;
     text-align: justify;
 }
@@ -264,7 +263,7 @@ button {
 /* Nosso time */
 
 .nossoTime {
-    height: 700px;
+    height: 600px;
 }
 
 .container-pt2 {
@@ -272,7 +271,7 @@ button {
     height: 100px;
     margin: auto;
     justify-content: space-between;
-    margin-top: 10rem;
+    margin-top: 3rem;
 }
 
 .tltTime {
@@ -392,6 +391,7 @@ button {
     font-weight: 300;
     font-size: 17px;
     color: var(--colorAll);
+    text-align: center;
 }
 
 .texto-visao {
@@ -399,6 +399,7 @@ button {
     font-weight: 300;
     font-size: 17px;
     color: var(--colorAll);
+    text-align: center;
 }
 
 .texto-valores {
@@ -406,6 +407,7 @@ button {
     font-weight: 300;
     font-size: 17px;
     color: var(--colorAll);
+    text-align: center;
 }
 
 /*CHAT  ----------------------------------------------------------------*/
@@ -465,7 +467,7 @@ button {
     width: 100%;
     height: 9rem;
     background-color: #4B1761;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 .logo-footer img {
