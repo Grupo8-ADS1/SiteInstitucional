@@ -246,8 +246,8 @@ form {
     color: #FFFFFF;
     width: 150px;
     height: 40px;
-    margin-left: 35%;
-    margin-top: 10px;
+    margin-left: 230px;
+    margin-top: 15px;
     border-radius: 8px;
     border: none;
     font-family: 'Poppins';
@@ -257,6 +257,18 @@ form {
 
 .formulario a {
     text-decoration: none;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+}
+.cadastrar_novo_fun {
+    color: #4B1761;
+    font-size: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 /**Footer**/

@@ -128,7 +128,7 @@ button {
 }
 
 .missao {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
 }
 
@@ -166,13 +166,13 @@ button {
 }
 
 .visao {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
 
 }
 
 .valores {
-    text-align: justify;
+    text-align: center;
     width: 11rem;
 }
 
@@ -254,7 +254,7 @@ button {
 
 .texto-conheca {
     color: #4D4B4B;
-    font-size: 22px;
+    font-size:18px;
     margin-left: 20px;
     margin-top: 70px;
     margin-right: 40px;
@@ -392,6 +392,7 @@ button {
     font-weight: 300;
     font-size: 17px;
     color: var(--colorAll);
+    text-align: center;
 }
 
 .texto-visao {
@@ -399,6 +400,7 @@ button {
     font-weight: 300;
     font-size: 17px;
     color: var(--colorAll);
+    text-align: center;
 }
 
 .texto-valores {
@@ -406,6 +408,7 @@ button {
     font-weight: 300;
     font-size: 17px;
     color: var(--colorAll);
+    text-align: center;
 }
 
 /*CHAT  ----------------------------------------------------------------*/
