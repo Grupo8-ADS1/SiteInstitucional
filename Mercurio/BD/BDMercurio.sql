@@ -46,7 +46,6 @@ CREATE TABLE captacao
     CONSTRAINT FOREIGN KEY(fkSensor) REFERENCES sensor(idSensor)
 );
 
-select * from empresa;
-select * from usuario;
+
 
 
