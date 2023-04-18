@@ -8,7 +8,7 @@ body {
 
 
 body {
-    background-image: url('/css/img/fundo.png');
+    background-image: url(img/img_login.png);
     background-size: cover;
 }
 
