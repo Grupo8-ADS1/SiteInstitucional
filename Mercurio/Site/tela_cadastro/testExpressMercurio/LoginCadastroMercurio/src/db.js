@@ -3,8 +3,8 @@ const mysql = require('mysql2'); // função de conectar com o banco
 
 const connection = mysql.createConnection({ // criando a conexão com o banco
     host: 'localhost',  // server local
-    user: 'root', // usuario do banco local
-    password: '818825Felp', // senha do banco local
+    user: 'evelyn', // usuario do banco local
+    password: 'sptech', // senha do banco local
     database: 'mercurio' // database do site
 });
 
