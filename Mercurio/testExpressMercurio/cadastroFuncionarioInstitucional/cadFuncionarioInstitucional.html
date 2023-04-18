@@ -31,19 +31,19 @@
 
             <form action="/api/usuario" method="post">
                 <p>Nome completo:</p>
-                <input placeholder="" name="nomeUsuario" class="input-campo-um" type="text">
+                <input placeholder="" name="nomeUsuario" class="input-campo-um" type="text"  required oninvalid="this.setCustomValidity('O campo nome está vazio')" oninput="setCustomValidity('')">
                 <br>
                 <p>Data de nascimento:</p>
-                <input placeholder="" name="dtNascUsuario" class="input-campo-dois" type="date">
+                <input placeholder="" name="dtNascUsuario" class="input-campo-dois" type="date" required oninvalid="this.setCustomValidity('O campo data de nascimento está vazio')" oninput="setCustomValidity('')">
                 <br>
                 <p>Cpf:</p>
-                <input placeholder="" name="cpfUsuario" class="input-campo-tres" type="text">
+                <input placeholder="" name="cpfUsuario" class="input-campo-tres" type="text" required oninvalid="this.setCustomValidity('O campo cpf está vazio')" oninput="setCustomValidity('')">
                 <br>
                 <p>Email:</p>
-                <input placeholder="" name="emailUsuario" class="input-campo-quatro" type="text">
+                <input placeholder="" name="emailUsuario" class="input-campo-quatro" type="text" required oninvalid="this.setCustomValidity('O campo e-mail está vazio')" oninput="setCustomValidity('')">
                 <br>
                 <p>Senha:</p>
-                <input placeholder="" name="senhaUsuario" class="input-campo-cinco" type="password">
+                <input placeholder="" name="senhaUsuario" class="input-campo-cinco" type="password" required oninvalid="this.setCustomValidity('O campo senha está vazio')" oninput="setCustomValidity('')">
                 <br>
 
                 <p>Função:</p>
