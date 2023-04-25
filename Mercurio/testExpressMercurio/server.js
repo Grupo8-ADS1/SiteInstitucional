@@ -1,21 +1,8 @@
-const express = require('express'); 
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const routes = require('./LoginCadastroMercurio/src/routes');
-const server = express();
+const express = require('express');
+const server = express() 
 
-require('dotenv').config({
-    path: 'variaveis.env'
-});
 
-server.use(cors());
-server.use(bodyParser.urlencoded({
-    extended: false
-}));
 
-server.use('/api', routes)
-
-server.use(express.json())
 
 server.use(express.static('public'))
 
