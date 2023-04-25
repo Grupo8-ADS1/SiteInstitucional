@@ -41,8 +41,15 @@ button {
 .titulo {
     color: #ffffff;
     font-weight: 500;
-
+    display: flex;
+    justify-content: space-between;
 }
+
+.pointer{
+    margin-top: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+} 
 
 .navbar li,
 .navbar a {

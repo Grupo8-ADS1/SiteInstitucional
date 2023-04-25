@@ -180,7 +180,7 @@
         <div class="container-chat">
             <div class="header-chat">
                 <div class="container-header">
-                    <span class="titulo" id="tituloChat">Chat</span>
+                    <span class="titulo" id="tituloChat">Chat <i class="fa-solid fa-xmark fa-lg pointer" onclick="fechar()"></i></span>
                 </div>
             </div>
             <div class="perguntas" id="infoContato">
@@ -225,7 +225,7 @@
     }
 
     function contato(){
-        tituloChat.innerHTML = "Contatos"
+        tituloChat.innerHTML = `Contatos <i class="fa-solid fa-xmark fa-lg pointer" onclick="fechar()"></i>`
         infoContato.innerHTML = `<span style="padding: 10px; text-align: center; color: #3b3b3b; display: flex; justify-content: center; flex-direction: column; align-items: center"><br>
         Qualquer dúvida que tenha entre em contato conosco!<br><br>
         Utilizando nosso número: <b>(11) 99999-9999</b> <br>
@@ -237,5 +237,9 @@
         </span>
         `;
         footerChat.innerHTML = ``;
+    }
+
+    function fechar(){
+        div_chat.innerHTML = "";
     }
 </script>
