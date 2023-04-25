@@ -30,10 +30,9 @@
 
         <div class="formulario">
             <h1> Login</h1>
-            <!-- o action acessa a funcao(rota) criada na API para fazer a pesquisa no banco -->
-            <form action="/api/login" method="post"> 
+                     <form> 
 
-                <input placeholder="eduardo@gmail.com" class="input email" name="emailUsuario" type="text"
+                <input placeholder="fernando.brandao@sptech.school" class="input email" name="emailUsuario" type="text"
                     id="inputLogin" required oninvalid="this.setCustomValidity('O campo e-mail está vazio')" oninput="setCustomValidity('')">
                 <i class="fa-solid fa-user icon" style="color: #4f4f4f;"></i><br>
 
@@ -47,11 +46,10 @@
                             Cadastre-se</a></span>
                 </div>
 
-                <button id="teste" type="submit">Entrar</button>
-
             </form>
 
-
+            <button id="teste" onclick="VerificarUsuario()">Entrar</button>
+    
         </div>
     </section>
 
@@ -94,3 +92,40 @@
 </body>
 
 </html>
+
+<script>
+
+    function VerificarUsuario(){
+
+        var usuario = inputLogin.value;
+        var senha = Number(inputSenha.value);
+        var validacaoUser = usuario == "fernando.brandao@sptech.school" 
+        var validacaoSenha = senha == "12345678";
+
+        
+
+        if(validacaoUser && validacaoSenha){
+
+            alert(`
+                   Usuário autenticado com sucesso!
+                   Redirecionando para o DashBoard!`)
+                   window.location.href('/index')
+                   
+        } else if(validacaoUser && !validacaoSenha){
+
+            alert(`
+                    Senha incorreta, insira uma senha válida e tente novamente!
+                `)
+        } else if (!validacaoUser && validacaoSenha){
+
+            alert(`E-mail incorreto, insira um e-mail válido e tente novamente!`)
+        } else {
+            alert(`Usuário e senha incorretos, por favor, verifique suas credenciais e tente novamente!`)
+        }
+
+
+    }
+
+
+
+</script>
