@@ -109,7 +109,7 @@
 
     function CadastrarEmpresa() {
         var nome_empresa = input_nomeEmpresa.value;
-        var cnpj_empresa = Number(input_cnpj.value);
+        var cnpj_empresa = input_cnpj.value;
         nome_empresa = nome_empresa.toLowerCase();
         // var indice_empresa = login.indexOf(nomeEmpresa);
 
@@ -118,13 +118,17 @@
                    Atenção, o CNPJ deve ter 14 caracteres!<br>
                    Por favor, insira um CNPJ válido!
                 `)
-        }
-        
-        if (cnpj_empresa.length = 14 && nome_empresa == nome_empresa) {
+        }else if(cnpj_empresa.length = 14 && nome_empresa == nome_empresa){
+
+           
             alert(`Cadastrado com Sucesso`)
             window.location.href = 'http://localhost:3300/cadastroFuncionarioInstitucional'
+
         } else {
             alert(`Falha ao cadastrar, por favor, verifique os campos preenchidos e tente novamente!`)
         }
+        
+        
+       
     }
 </script>
