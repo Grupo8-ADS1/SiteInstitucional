@@ -37,7 +37,7 @@
 
 
                     <span class="nomeEmpresa">Nome da empresa</span> <br>
-                    <input name="razaoSocial" id="input_nomeEmpresa" required oninvalid="this.setCustomValidity('O Campo deve ser preencido')" oninput="setCustomValidity('')"> <br>
+                    <input name="razaoSocial" id="input_nomeEmpresa" required oninvalid="this.setCustomValidity('O Campo deve ser preenchido')" oninput="setCustomValidity('')"> <br>
 
                     <span class="ladoTexto">
                         <span>CNPJ</span>
@@ -45,7 +45,7 @@
                     </span>
                     <span class="ladoAlado">
                         <!-- input cnpj -->
-                        <input name="cnpjEmpresa" id="input_cnpj" required oninvalid="this.setCustomValidity('O Campo deve ser preencido com o CNPJ')" oninput="setCustomValidity('')">
+                        <input name="cnpjEmpresa" id="input_cnpj" required oninvalid="this.setCustomValidity('O Campo deve ser preenchido com o CNPJ')" oninput="setCustomValidity('')">
                         <!-- input do porte da empresa -->
                         <select class="selecao" name="porteEmpresa" id="input_porte">
                             <option selected disabled>Porte</option>
@@ -56,15 +56,13 @@
                     </span>
 
                 </div>
-                <button type="submit" onclick="">Continuar</button>
                 <br>
-                
                 <span class="cadastrar_novo_fun"><a style="margin-left: 25px;" href="/cadastroFuncionarioInstitucional">Cadastrar novo funcionario</a></span>
             </form>
-
+            <button onclick="CadastrarEmpresa()">Continuar</button>
         </div>
     </section>
-
+                        
 
     <!--Footer-->
     <div class="footer">
@@ -108,27 +106,25 @@
 </html>
 
 <script>
-    
-    var login;
-    var senha;
-    var nomeEmpresa;
-    var indice_empresa;
 
-    function cadastrar() {
-        var login = input_email.value
-        var senha = input_senha.value
-        var nomeEmpresa = input_nomeEmpresa.value
-        nomeEmpresa = nomeEmpresa.toLowerCase()
-        var indice_empresa = login.indexOf(nomeEmpresa)
+    function CadastrarEmpresa() {
+        var nome_empresa = input_nomeEmpresa.value;
+        var cnpj_empresa = Number(input_cnpj.value);
+        nome_empresa = nome_empresa.toLowerCase();
+        // var indice_empresa = login.indexOf(nomeEmpresa);
 
-        if (senha.length < 8) {
-            alert(`Sua senha deve conter pelo menos 8 caracteres`)
+        if (cnpj_empresa.length < 14 || cnpj_empresa.length > 14) {
+            alert(`
+                   Atenção, o CNPJ deve ter 14 caracteres!<br>
+                   Por favor, insira um CNPJ válido!
+                `)
         }
-        if (login.endsWith(".com") && indice_empresa >= 0 && senha.length >= 8 && login.indexOf("@") >= 0) {
+        
+        if (cnpj_empresa.length = 14 && nome_empresa == nome_empresa) {
             alert(`Cadastrado com Sucesso`)
-            window.location('/cadastroFuncionarioInstitucional')
+            window.location.href = 'http://localhost:3300/cadastroFuncionarioInstitucional'
         } else {
-            alert(`Falha ao cadastrar`)
+            alert(`Falha ao cadastrar, por favor, verifique os campos preenchidos e tente novamente!`)
         }
     }
 </script>
