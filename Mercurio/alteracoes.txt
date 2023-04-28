@@ -1,0 +1,15 @@
+tirar o br do alerta na pag cadastro
+
+icone na aba pag quem somos
+
+foto no canva (site)
+
+add segmento no priemiro slide
+
+foto do fundo pag cadastrar colabaoradp
+
+mudar redirecioanmento do site na pag cadastrar colabaoradp
+
+centralizar botao login
+
+mudar as ondas do fundo para svg
