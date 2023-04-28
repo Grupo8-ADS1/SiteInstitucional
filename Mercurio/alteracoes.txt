@@ -11,5 +11,6 @@ foto do fundo pag cadastrar colabaoradp
 mudar redirecioanmento do site na pag cadastrar colabaoradp
 
 centralizar botao login
+diminuir margin top no simulador
 
 mudar as ondas do fundo para svg
