@@ -65,6 +65,7 @@ button {
 
 .teste {
     width: 1rem;
+    
 }
 
 .btn-login a {
@@ -168,7 +169,6 @@ button {
     border: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    margin-left: 35%;
 
 }
 
