@@ -198,3 +198,17 @@ body::-webkit-scrollbar-thumb {
 	bottom: 0;
     background-color: #4B1761;
 }
+
+/* Lista Crítico */
+
+.critico{
+    background-color: red;
+    color: #ffffff;
+}
+
+/* Lista Emergencial */
+
+.emergencial{
+    background-color: orange;
+    color: #000;
+}

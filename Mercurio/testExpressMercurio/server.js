@@ -50,7 +50,6 @@ res.sendFile(__dirname + `/cadastroFuncionarioInstitucional/cadFuncionarioInstit
 });
 
 
-
 server.listen(3300, () => {
     console.log(`Servidor rodando em http://localhost:3300`); 
 });
