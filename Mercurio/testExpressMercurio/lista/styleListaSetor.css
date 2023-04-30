@@ -212,3 +212,8 @@ body::-webkit-scrollbar-thumb {
     background-color: orange;
     color: #000;
 }
+
+.alerta{
+    background-color: yellow;
+    color: #000;
+}
