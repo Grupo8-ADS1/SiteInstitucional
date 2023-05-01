@@ -49,7 +49,25 @@ server.get('/cadastroFuncionario', (req, res) => {
 res.sendFile(__dirname + `/cadastroFuncionarioInstitucional/cadFuncionarioInstitucional.html`);
 });
 
+server.get('/listaSetoresIdeais', (req, res) => {
+    res.sendFile(__dirname + `/lista/listaSetoresIdeais.html`);
+    });
+
+    server.get('/listaSetoresAlerta', (req, res) => {
+        res.sendFile(__dirname + `/lista/listaSetoresAlerta.html`);
+        });
+    
+    server.get('/listaSetoresEmergenciais', (req, res) => {
+    res.sendFile(__dirname + `/lista/listaSetoresEmergencial.html`);
+    });
+    
+    server.get('/listaSetoresCriticos', (req, res) => {
+    res.sendFile(__dirname + `/lista/listaSetoresCritico.html`);
+    });
+
+
 
 server.listen(3300, () => {
     console.log(`Servidor rodando em http://localhost:3300`); 
 });
+
