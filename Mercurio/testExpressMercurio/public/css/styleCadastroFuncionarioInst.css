@@ -170,12 +170,13 @@ a {
 .formulario {
     background-color: #FFFFFF;
     width: 400px;
-    height: 790px;
+    height: 750px;
     margin-top: 70px;
     margin-left: 34%;
     padding: 20px;
     border-radius: 20px;
     box-shadow: -1px 3px 11px -3px #60606081;
+    margin-bottom: 5vh;
 }
 
 .formulario h1 {

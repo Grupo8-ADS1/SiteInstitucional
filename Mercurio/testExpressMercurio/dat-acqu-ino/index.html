@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercúrio | Dashboard</title>t</title>
+    <title>Mercúrio | Dashboard</title>
 
     <script src="https://kit.fontawesome.com/22cb63056a.js" crossorigin="anonymous"></script>
-
     <link rel="icon" type="image/png" href="/css/img/asinha.png"/>
 
     <link rel="stylesheet" href="../css/styleDash.css">
@@ -21,7 +20,6 @@
 </head>
 
 <body>
-
     <div class="header">
         <div class="container">
             <div class="logo-header"><img src="../css/img/LOGO_COMPLETA.png" alt=""> </div>
@@ -90,7 +88,7 @@
 
         <div class="grafico-fluxo-setores">
             <section>
-                <canvas class="grafico_setores" id="chave"></canvas>
+                <canvas class="grafico_setores" id="setores"></canvas>
             </section>
         </div>
 
@@ -123,14 +121,19 @@
                     <button class="filtrar">Filtrar</button>
                 </div>
             </div>
+
+        </div>
+
+        <div class="div-grafico-simulacao">
+            <section>
+                <canvas id="chave"></canvas>
+            </section>
         </div>
 
     </div>
 
     <div class="footer">
         <div class="container-footer">
-
-            
         </div>
     </div>
 
@@ -141,12 +144,89 @@
 
 <script>
 
+    /* -- chave */
     var contextoChave = document.getElementById('chave').getContext('2d');
-    contextoChave.canvas.width = 1150;
-    contextoChave.canvas.height = 300;
+        contextoChave.canvas.width = 1150;
+        contextoChave.canvas.height = 300;
+        var chave = new Chart(
+            contextoChave,
+            {
+                type: 'line',
+                data: {
+                    datasets: [{
+                        label: 'Movimentação',
+                        type: 'line',
+                        borderColor: ['#ffd902'],
+                        backgroundColor: ['#ffe135']
+                    }]
+                },
+                options: {
+                    scales: {
+                        xAxes: [{
+                            distribution: 'series',
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Chave'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    animation: {
+                        duration: 0
+                    }
+                }
+            }
+        );
+
+        var paginacao = {};
+        var tempo = {};
+        function obterDados(grafico, endpoint) {
+            var http = new XMLHttpRequest();
+            http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
+            http.send(null);
+            var valores = JSON.parse(http.responseText);
+            if (paginacao[endpoint] == null) {
+                paginacao[endpoint] = 0;
+            }
+            if (tempo[endpoint] == null) {
+                tempo[endpoint] = 0;
+            }
+            // Exibir à partir do último elemento exibido anteriormente
+            var ultimaPaginacao = paginacao[endpoint];
+            paginacao[endpoint] = valores.length;
+            var valores = valores.slice(ultimaPaginacao);
+            valores.forEach((valor) => {
+                //Máximo de 60 itens exibidos no gráfico
+                if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
+                    grafico.data.labels.shift();
+                    grafico.data.datasets[0].data.shift();
+                }
+
+                grafico.data.labels.push(tempo[endpoint]++);
+                grafico.data.datasets[0].data.push(parseFloat(valor));
+                grafico.update();
+            })
+        }
+
+        setInterval(() => {
+            obterDados(chave, 'chave');
+        }, 1000);
+
+
+    // grafico fluxos
+    var contextoSetor = document.getElementById('setores').getContext('2d');
+    contextoSetor.canvas.width = 1150;
+    contextoSetor.canvas.height = 300;
 
     var chave = new Chart(
-        contextoChave, {
+        contextoSetor, {
             type: 'bar',
             data: { // json dos dados
             labels: ['07:00', '07:10', '07:20', '07:30', '07:40', '07:50', '08:00', '08:10', '08:20'], // vetor do eixo X,
@@ -164,7 +244,7 @@
                 {
 
                     label: 'Açougue',
-                    data: [210,745,140,1000,758,140,69,210,630],
+                    data: [210,745,140,1005,758,140,69,210,630],
                     borderWidth: 1,
                     backgroundColor: 'rgba(205,92,92)',
                 },
@@ -224,13 +304,14 @@
 
                     if (value >= 420 && value <= 630 ) {
                         message = 'Fluxo Ideal';
-                        backgroundColor: 'green';
                     
-                    }else if(value < 420 || value > 630){
+                    }else if(value > 209 && value < 420){
                         message = 'Fluxo em Alerta';
-                        backgroundColor: 'yellow'
                     
-                    }else if( value >= 100 && value <= 210){
+                    }else if(value > 630 && value < 841){
+                        message = 'Fluxo em Alerta';
+                    }
+                    else if( value >= 100 && value <= 210){
                         message = 'Fluxo Emergencial';
                     
                     }else if(value >= 840 && value <= 1000){
@@ -239,7 +320,7 @@
                     }else if(value >= 0 && value < 100 ){
                         message = 'Fluxo Crítico';
                     
-                    }else if(value >= 1000){
+                    }else if(value >= 1001){
                         message = 'Fluxo Crítico';
                     
                     }
@@ -367,13 +448,14 @@
 
                     if (value >= 420 && value <= 630 ) {
                         message = 'Fluxo Ideal';
-                        backgroundColor: 'green';
                     
-                    }else if(value < 420 || value > 630){
+                    }else if(value > 209 && value < 420){
                         message = 'Fluxo em Alerta';
-                        backgroundColor: 'yellow'
                     
-                    }else if( value >= 100 && value <= 210){
+                    }else if(value > 630 && value < 841){
+                        message = 'Fluxo em Alerta';
+                    }
+                    else if( value >= 100 && value <= 210){
                         message = 'Fluxo Emergencial';
                     
                     }else if(value >= 840 && value <= 1000){
@@ -382,7 +464,7 @@
                     }else if(value >= 0 && value < 100 ){
                         message = 'Fluxo Crítico';
                     
-                    }else if(value >= 1000){
+                    }else if(value >= 1001){
                         message = 'Fluxo Crítico';
                     
                     }

@@ -178,6 +178,20 @@
         margin-top: 3vh;
     }
 
+    .div-grafico-simulacao{
+        background-color: #2d2d2d;
+        border: #404040 2px solid;
+        height: 45vh;
+        width: 162vh;
+        border-radius: 10px;
+        box-shadow: -1px 3px 11px -3px #39393982;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3vh;
+    }
+
     .quadro2-graficos{
         display: flex;
         gap: 20px;
